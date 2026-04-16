@@ -1,0 +1,527 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Contact - Prodisenyo Builders</title>
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@200;300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#e0e3e5",
+              error: "#ba1a1a",
+              "surface-bright": "#f7fafc",
+              "on-secondary-container": "#007165",
+              "tertiary-fixed": "#eddcff",
+              "inverse-on-surface": "#eef1f3",
+              "on-surface": "#181c1e",
+              "on-secondary-fixed": "#00201c",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-container-low": "#f1f4f6",
+              "inverse-primary": "#a5cdda",
+              "on-tertiary-container": "#d8c2f2",
+              "on-primary-fixed": "#001f27",
+              "on-primary-container": "#a9d1df",
+              "tertiary-container": "#5f4e77",
+              "surface-dim": "#d7dadc",
+              surface: "#f7fafc",
+              "tertiary-fixed-dim": "#d3beee",
+              "primary-fixed": "#c0e9f7",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#8df5e4",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "secondary-container": "#8df5e4",
+              "on-primary-fixed-variant": "#244c57",
+              "outline-variant": "#bfc8c8",
+              "on-tertiary-fixed": "#231339",
+              "inverse-surface": "#2d3133",
+              "primary-fixed-dim": "#a5cdda",
+              "secondary-fixed-dim": "#70d8c8",
+              "on-secondary": "#ffffff",
+              primary: "#1b434e",
+              "primary-container": "#345b66",
+              "on-surface-variant": "#404849",
+              "on-secondary-fixed-variant": "#005048",
+              outline: "#707979",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#ebeef0",
+              tertiary: "#47375e",
+              "on-tertiary-fixed-variant": "#503f67",
+              background: "#f7fafc",
+              "on-background": "#181c1e",
+              secondary: "#006b5f",
+              "surface-tint": "#3d6470",
+              "surface-container-highest": "#e0e3e5",
+              "surface-container-high": "#e5e9eb",
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Space Grotesk"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .brand-font {
+        font-family: "Space Grotesk", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/10"
+    >
+      <div
+        class="flex justify-between items-center w-full px-12 py-3 max-w-[1920px] mx-auto"
+      >
+        <div class="text-xl font-bold tracking-tighter text-white">
+          Prodisenyo Builders
+        </div>
+        <div class="hidden md:flex gap-10 items-center">
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white transition-colors duration-300"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="portfolio.html"
+            >Projects</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 border-b-2 border-white pb-1 hover:text-white transition-colors duration-300"
+            href="contact.html"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
+        >
+          Get Quote
+        </button>
+      </div>
+    </nav>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="bg-[#0a1a1e] px-6 md:px-12 py-28 border-t border-white/5 relative overflow-hidden"
+      >
+        <div
+          class="absolute top-10 right-10 opacity-[0.03] select-none pointer-events-none"
+        >
+          <span
+            class="text-[10rem] font-black text-[#14b8a6] leading-none tracking-tighter"
+            >INQ</span
+          >
+        </div>
+
+        <div
+          class="max-w-[1920px] mx-auto grid grid-cols-12 gap-0 relative z-10"
+        >
+          <div class="col-span-12 lg:col-span-8">
+            <div class="flex items-center gap-4 mb-10">
+              <span
+                class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.5em]"
+                >System_Inquiry // 04</span
+              >
+              <div class="h-px w-20 bg-white/10"></div>
+            </div>
+
+            <h1
+              class="text-7xl md:text-[9rem] font-black text-white leading-[0.8] tracking-[-0.05em] uppercase"
+            >
+              Build with <br />
+              <span
+                class="text-transparent"
+                style="-webkit-text-stroke: 1.5px rgba(20, 184, 166, 0.4)"
+                >Precision.</span
+              >
+            </h1>
+          </div>
+
+          <div class="hidden lg:flex col-span-4 items-end justify-end">
+            <div class="text-right border-r border-[#14b8a6] pr-6 py-2">
+              <span
+                class="block text-[9px] font-black text-[#14b8a6] uppercase tracking-[0.4em] mb-1"
+                >Status</span
+              >
+              <span
+                class="block text-white font-bold tracking-tight uppercase text-sm"
+                >Open for Consultation</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-48 h-px bg-[#14b8a6]/40"></div>
+      </section>
+      <!-- Main Content: Form & Info -->
+      <section class="max-w-[1920px] mx-auto flex flex-col lg:flex-row">
+        <!-- Left Side: Contact Form -->
+        <div class="lg:w-1/2 bg-surface_container_low p-12 lg:p-24">
+          <div class="max-w-xl">
+            <h2
+              class="text-3xl font-bold text-primary mb-12 uppercase tracking-tighter"
+            >
+              Project Brief
+            </h2>
+            <form class="space-y-10">
+              <div class="relative">
+                <label
+                  class="block font-['Inter'] text-[0.75rem] font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                  >Full Name</label
+                >
+                <input
+                  class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 px-4 py-4 font-['Space_Grotesk'] placeholder:text-outline/50 transition-all duration-300"
+                  placeholder="ARCHITECT / CLIENT NAME"
+                  type="text"
+                />
+              </div>
+              <div class="relative">
+                <label
+                  class="block font-['Inter'] text-[0.75rem] font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                  >Email Address</label
+                >
+                <input
+                  class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 px-4 py-4 font-['Space_Grotesk'] placeholder:text-outline/50 transition-all duration-300"
+                  placeholder="EMAIL@OFFICE.COM"
+                  type="email"
+                />
+              </div>
+              <div class="relative">
+                <label
+                  class="block font-['Inter'] text-[0.75rem] font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                  >Project Type</label
+                >
+                <select
+                  class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 px-4 py-4 font-['Space_Grotesk'] text-on-surface transition-all duration-300"
+                >
+                  <option>COMMERCIAL CONSTRUCTION</option>
+                  <option>RESIDENTIAL DEVELOPMENT</option>
+                  <option>STRUCTURAL ENGINEERING</option>
+                  <option>INTERIOR ARCHITECTURE</option>
+                </select>
+              </div>
+              <div class="relative">
+                <label
+                  class="block font-['Inter'] text-[0.75rem] font-bold uppercase tracking-widest text-on-surface-variant mb-2"
+                  >Message</label
+                >
+                <textarea
+                  class="w-full bg-surface-container-highest border-0 border-b-2 border-transparent focus:border-primary focus:ring-0 px-4 py-4 font-['Space_Grotesk'] placeholder:text-outline/50 transition-all duration-300"
+                  placeholder="DESCRIBE THE SCOPE AND SITE LOCATION"
+                  rows="4"
+                ></textarea>
+              </div>
+              <button
+                class="bg-primary text-on-primary px-12 py-5 uppercase font-bold tracking-widest text-sm flex items-center gap-4 hover:bg-primary-container transition-colors group"
+                type="submit"
+              >
+                Submit Inquiry
+                <span
+                  class="material-symbols-outlined group-hover:translate-x-2 transition-transform"
+                  >arrow_forward</span
+                >
+              </button>
+            </form>
+          </div>
+        </div>
+        <!-- Right Side: Details & Map -->
+        <div class="lg:w-1/2 flex flex-col">
+          <div class="h-[400px] lg:h-[600px] relative overflow-hidden group">
+            <img
+              class="w-full h-full object-cover grayscale brightness-50 group-hover:scale-105 transition-transform duration-700"
+              data-alt="Modern architectural abstract map view with teal and slate gray lines representing city grid and structural planning"
+              data-location="Metropolis"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuArpmL1ebQ_1QqKJpOa84jA6w31ETVwy36kLWu9kCKqoko1ilS1v72y4ebMu1uv6qPmccYSu9R9ZhHD_iMzlxjGjIjM0FqO753ePabUAFNLSWPHJVrFJl6oPGaQf_K-7YNBS7qLF1BIIvbook7SX6vTSWxtFA8wP4MGGscjN3RGhakBSGQ0z1EfnhOqJJGah4rUMO4Lyta_1_KRVFud_Qq6ql_jCJq3epFbnhfr7wOIashA0dYDa9omRdwvfwSkfemhlSBc7bdW6TIJ"
+            />
+            <div class="absolute inset-0 bg-primary/20 backdrop-multiply"></div>
+            <div class="absolute bottom-12 left-12">
+              <div class="bg-surface p-8 shadow-2xl">
+                <span
+                  class="label-md uppercase tracking-[0.2em] text-secondary font-bold mb-4 block"
+                  >Headquarters</span
+                >
+                <p
+                  class="font-['Space_Grotesk'] text-xl font-bold text-primary"
+                >
+                  77 Drafting Lane, <br />Industrial District, SC 2040
+                </p>
+              </div>
+            </div>
+          </div>
+          <div
+            class="flex-grow bg-[#0a1a1e] p-12 lg:p-24 text-on-primary flex flex-col justify-center"
+          >
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
+              <div>
+                <span
+                  class="block text-[0.7rem] uppercase tracking-[0.3em] text-primary-fixed-dim font-bold mb-4"
+                  >Direct Communication</span
+                >
+                <div class="space-y-4">
+                  <p
+                    class="flex items-center gap-3 font-['Space_Grotesk'] text-xl"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary"
+                      data-icon="call"
+                      >call</span
+                    >
+                    +1 (555) 890 2344
+                  </p>
+                  <p
+                    class="flex items-center gap-3 font-['Space_Grotesk'] text-xl"
+                  >
+                    <span
+                      class="material-symbols-outlined text-secondary"
+                      data-icon="mail"
+                      >mail</span
+                    >
+                    studio@prodisenyo.com
+                  </p>
+                </div>
+              </div>
+              <div>
+                <span
+                  class="block text-[0.7rem] uppercase tracking-[0.3em] text-primary-fixed-dim font-bold mb-4"
+                  >Office Hours</span
+                >
+                <div class="space-y-1 font-['Inter'] font-light opacity-80">
+                  <p>Mon — Fri: 08:00 - 18:00</p>
+                  <p>Sat: 09:00 - 13:00</p>
+                  <p>Sun: Closed</p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-20 border-t border-white/10 pt-12 flex gap-8">
+              <a
+                class="text-white hover:text-secondary transition-colors"
+                href="#"
+                ><span
+                  class="font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold"
+                  >Instagram</span
+                ></a
+              >
+              <a
+                class="text-white hover:text-secondary transition-colors"
+                href="#"
+                ><span
+                  class="font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold"
+                  >LinkedIn</span
+                ></a
+              >
+              <a
+                class="text-white hover:text-secondary transition-colors"
+                href="#"
+                ><span
+                  class="font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold"
+                  >Behance</span
+                ></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Aesthetic Structural Detail -->
+      <section
+        class="h-48 bg-surface-container flex items-center justify-center overflow-hidden"
+      >
+        <div
+          class="text-[12rem] font-bold text-surface-container-highest/50 select-none whitespace-nowrap tracking-tighter"
+        >
+          PRECISION STRUCTURAL ENGINEERING PRODISENYO
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#0a1a1e] text-white w-full border-t border-white/5">
+      <div
+        class="w-full px-12 py-24 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-24"
+      >
+        <div class="space-y-8">
+          <div
+            class="text-2xl font-black uppercase tracking-tighter leading-none"
+          >
+            Prodisenyo <br />
+            <span class="text-[#14b8a6]">Builders</span>
+          </div>
+          <p class="text-sm font-medium text-white/40 max-w-xs leading-relaxed">
+            Leading the industry in structural precision and modern
+            architectural construction. Precision in every joint, integrity in
+            every structure.
+          </p>
+          <div class="flex gap-4">
+            <div class="w-8 h-[2px] bg-[#14b8a6]"></div>
+            <span
+              class="text-[9px] font-black uppercase tracking-[0.4em] text-white/20"
+              >Est. 1998</span
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <h5
+            class="font-black text-[10px] tracking-[0.5em] text-[#14b8a6] uppercase"
+          >
+            Governance
+          </h5>
+          <nav class="flex flex-col gap-4">
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Terms of Service</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Cookie Policy</a
+            >
+          </nav>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <h5
+            class="font-black text-[10px] tracking-[0.5em] text-[#14b8a6] uppercase"
+          >
+            Social Index
+          </h5>
+          <nav class="flex flex-col gap-4">
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >LinkedIn</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Instagram</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >ArchDaily</a
+            >
+          </nav>
+        </div>
+
+        <div class="lg:border-l border-white/5 lg:pl-12 space-y-8">
+          <div>
+            <h5
+              class="font-black text-[10px] tracking-[0.5em] text-[#14b8a6] uppercase mb-6"
+            >
+              Headquarters
+            </h5>
+            <p class="text-sm font-bold text-white leading-relaxed">
+              1248 Structure Ave, Design District<br />
+              Manila, Philippines
+            </p>
+          </div>
+          <div>
+            <a
+              class="text-sm font-black text-white hover:text-[#14b8a6] transition-colors tracking-tighter"
+              href="mailto:contact@prodisenyo.com"
+            >
+              CONTACT@PRODISENYO.COM
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-full px-6 md:px-20 py-12 border-t border-white/5 bg-black/20"
+      >
+        <div
+          class="max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+          <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+            <span
+              class="text-[10px] font-bold text-white/20 uppercase tracking-[0.3em]"
+            >
+              © 2026 Prodisenyo Builders
+            </span>
+            <span class="hidden md:block w-px h-3 bg-white/10"></span>
+            <span
+              class="text-[10px] font-bold text-white/20 uppercase tracking-[0.3em]"
+            >
+              Precision in Structure
+            </span>
+          </div>
+
+          <div class="flex gap-10 opacity-20 group">
+            <span
+              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
+              >architecture</span
+            >
+            <span
+              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
+              >engineering</span
+            >
+            <span
+              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
+              >apartment</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

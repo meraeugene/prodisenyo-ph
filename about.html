@@ -1,0 +1,715 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>About | PRODISENYO BUILDERS</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#5f4e77",
+              "on-primary-fixed": "#001f27",
+              "secondary-fixed": "#8df5e4",
+              "secondary-container": "#8df5e4",
+              "surface-container-lowest": "#ffffff",
+              outline: "#707979",
+              "outline-variant": "#bfc8c8",
+              "surface-dim": "#d7dadc",
+              "surface-tint": "#3d6470",
+              "surface-container": "#ebeef0",
+              "on-primary-fixed-variant": "#244c57",
+              "on-tertiary-fixed-variant": "#503f67",
+              error: "#ba1a1a",
+              "on-tertiary-container": "#d8c2f2",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed": "#00201c",
+              "inverse-primary": "#a5cdda",
+              "on-surface-variant": "#404849",
+              "tertiary-fixed-dim": "#d3beee",
+              tertiary: "#47375e",
+              "on-error-container": "#93000a",
+              surface: "#f7fafc",
+              "on-secondary-fixed-variant": "#005048",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f1f4f6",
+              background: "#f7fafc",
+              "surface-variant": "#e0e3e5",
+              "on-background": "#181c1e",
+              "inverse-on-surface": "#eef1f3",
+              "error-container": "#ffdad6",
+              "primary-container": "#345b66",
+              primary: "#1b434e",
+              "surface-container-high": "#e5e9eb",
+              "on-secondary-container": "#007165",
+              "tertiary-fixed": "#eddcff",
+              "surface-bright": "#f7fafc",
+              "primary-fixed-dim": "#a5cdda",
+              "primary-fixed": "#c0e9f7",
+              secondary: "#006b5f",
+              "on-surface": "#181c1e",
+              "on-primary": "#ffffff",
+              "inverse-surface": "#2d3133",
+              "secondary-fixed-dim": "#70d8c8",
+              "on-tertiary-fixed": "#231339",
+              "on-primary-container": "#a9d1df",
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Space Grotesk"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 300,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .font-headline {
+        font-family: "Space Grotesk", sans-serif;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface selection:bg-secondary selection:text-white"
+  >
+    <!-- TopAppBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/10"
+    >
+      <div
+        class="flex justify-between items-center w-full px-12 py-3 max-w-[1920px] mx-auto"
+      >
+        <div class="text-xl font-bold tracking-tighter text-white">
+          Prodisenyo Builders
+        </div>
+        <div class="hidden md:flex gap-10 items-center">
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white transition-colors duration-300"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="portfolio.html"
+            >Projects</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium border-b-2 border-white pb-1 text-white/70 hover:text-white transition-colors duration-300"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="contact.html"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
+        >
+          Get Quote
+        </button>
+      </div>
+    </nav>
+    <main class="">
+      <!-- Hero Section: Asymmetric Title -->
+      <section
+        class="bg-[#0a1a1e] px-12 py-32 border-t border-white/5 relative overflow-hidden"
+      >
+        <div
+          class="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-end"
+        >
+          <div class="lg:col-span-8">
+            <div class="flex items-center gap-4 mb-10">
+              <span
+                class="bg-[#14b8a6] text-[#0a1a1e] px-4 py-1 text-[10px] font-black tracking-[0.4em] uppercase"
+              >
+                Established 2004
+              </span>
+              <div class="h-px w-24 bg-white/10"></div>
+            </div>
+
+            <h1
+              class="text-7xl md:text-[9rem] font-black text-white leading-[0.85] tracking-[-0.05em] uppercase"
+            >
+              Our Legacy of <br />
+              <span
+                class="text-transparent"
+                style="-webkit-text-stroke: 1.5px rgba(20, 184, 166, 0.5)"
+                >Precision.</span
+              >
+            </h1>
+          </div>
+
+          <div class="lg:col-span-4 lg:pl-12 relative">
+            <div
+              class="absolute left-0 top-0 bottom-0 w-px bg-[#14b8a6] hidden lg:block"
+            ></div>
+
+            <div class="space-y-8">
+              <p
+                class="text-xl md:text-2xl text-white/50 font-medium leading-tight tracking-tight uppercase"
+              >
+                A monolith of modern engineering, carved from the intersection
+                of structural integrity and avant-garde aesthetic.
+              </p>
+
+              <div class="pt-8 border-t border-white/5 flex flex-col gap-2">
+                <span
+                  class="text-[9px] font-black text-[#14b8a6] uppercase tracking-[0.5em]"
+                  >Philosophy</span
+                >
+                <span
+                  class="text-white text-sm font-bold uppercase tracking-widest"
+                  >Structural Asymmetry // v4.0</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-24 w-full h-px bg-white/5 flex justify-between items-center px-2"
+        >
+          <div class="w-1/3 h-px bg-[#14b8a6]/20"></div>
+          <span
+            class="text-[8px] font-bold text-white/10 tracking-[1em] uppercase"
+            >Built for Permanence</span
+          >
+          <div class="w-1/3 h-px bg-[#14b8a6]/20"></div>
+        </div>
+      </section>
+      <!-- Mission Statement: Full Width Monolith -->
+      <section
+        class="bg-[#0a1a1e] px-12 py-32 border-t border-white/5 relative overflow-hidden"
+      >
+        <div
+          class="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16"
+        >
+          <div class="lg:col-span-4 space-y-12">
+            <div>
+              <div class="flex items-center gap-4 mb-8">
+                <span
+                  class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.5em]"
+                  >Global_Impact</span
+                >
+                <div class="h-px w-12 bg-white/10"></div>
+              </div>
+              <h2
+                class="text-6xl font-black text-white uppercase tracking-tighter leading-none"
+              >
+                Proven <br />
+                <span
+                  class="text-transparent"
+                  style="-webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.2)"
+                  >Stability.</span
+                >
+              </h2>
+            </div>
+
+            <div class="space-y-4">
+              <p
+                class="text-white/40 text-sm font-medium leading-relaxed max-w-xs"
+              >
+                Quantifying two decades of structural excellence. Our metrics
+                reflect a commitment to engineering permanence.
+              </p>
+              <div class="h-px w-full bg-white/5"></div>
+              <span
+                class="text-[9px] font-black text-[#14b8a6] uppercase tracking-[0.4em]"
+                >Data Verified // April 2026</span
+              >
+            </div>
+          </div>
+
+          <div
+            class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 border border-white/5"
+          >
+            <div
+              class="bg-[#0c1f24] p-12 group hover:bg-[#14b8a6]/5 transition-all duration-500"
+            >
+              <span
+                class="text-[10px] font-black text-[#14b8a6] uppercase tracking-[0.5em] block mb-12"
+                >Projects Completed</span
+              >
+              <div class="flex items-baseline gap-2">
+                <span class="text-7xl font-black text-white tracking-tighter"
+                  >450</span
+                >
+                <span class="text-[#14b8a6] font-black text-2xl">+</span>
+              </div>
+              <div class="mt-8 pt-8 border-t border-white/5">
+                <p
+                  class="text-[10px] text-white/30 uppercase tracking-widest leading-loose"
+                >
+                  Residential / Commercial / <br />Industrial Infrastructure
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#0c1f24] p-12 group hover:bg-[#14b8a6]/5 transition-all duration-500"
+            >
+              <span
+                class="text-[10px] font-black text-[#14b8a6] uppercase tracking-[0.5em] block mb-12"
+                >Awards Won</span
+              >
+              <div class="flex items-baseline gap-2">
+                <span class="text-7xl font-black text-white tracking-tighter"
+                  >12</span
+                >
+                <span class="text-[#14b8a6] font-black text-2xl">🏆</span>
+              </div>
+              <div class="mt-8 pt-8 border-t border-white/5">
+                <p
+                  class="text-[10px] text-white/30 uppercase tracking-widest leading-loose"
+                >
+                  Excellence in Structural <br />Innovation & Design
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#0c1f24] p-12 group hover:bg-[#14b8a6]/5 transition-all duration-500"
+            >
+              <span
+                class="text-[10px] font-black text-[#14b8a6] uppercase tracking-[0.5em] block mb-12"
+                >Client Retention</span
+              >
+              <div class="flex items-baseline gap-2">
+                <span class="text-7xl font-black text-white tracking-tighter"
+                  >98</span
+                >
+                <span class="text-[#14b8a6] font-black text-2xl">%</span>
+              </div>
+              <div class="mt-8 pt-8 border-t border-white/5">
+                <p
+                  class="text-[10px] text-white/30 uppercase tracking-widest leading-loose"
+                >
+                  Long-term Partnerships <br />Built on Integrity
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute bottom-0 right-0 p-10 opacity-[0.03] select-none pointer-events-none"
+        >
+          <div
+            class="text-[12rem] font-black text-white tracking-tighter leading-none"
+          >
+            STATS
+          </div>
+        </div>
+      </section>
+      <!-- Timeline: Asymmetric Grid -->
+      <section class="py-32 px-8 md:px-24">
+        <div class="mb-20">
+          <span
+            class="label-md uppercase tracking-[0.2em] text-secondary font-bold"
+            >THE GROWTH TIMELINE</span
+          >
+          <h2 class="text-5xl font-bold tracking-tighter text-primary mt-4">
+            Two Decades of Rigor
+          </h2>
+        </div>
+        <div class="space-y-1">
+          <!-- Timeline Item 1 -->
+          <div class="grid grid-cols-1 md:grid-cols-12 group cursor-default">
+            <div
+              class="md:col-span-2 py-12 border-b border-outline-variant group-hover:bg-surface-container-low transition-colors px-4"
+            >
+              <span class="text-4xl font-headline font-bold text-primary"
+                >2004</span
+              >
+            </div>
+            <div
+              class="md:col-span-10 py-12 border-b border-outline-variant group-hover:bg-surface-container-low transition-colors px-4"
+            >
+              <h3 class="text-xl font-bold mb-2">Foundation</h3>
+              <p class="text-on-surface-variant max-w-2xl">
+                Prodisenyo Builders established as a boutique structural
+                consultancy in a drafting studio.
+              </p>
+            </div>
+          </div>
+          <!-- Timeline Item 2 -->
+          <div class="grid grid-cols-1 md:grid-cols-12 group cursor-default">
+            <div
+              class="md:col-span-2 py-12 border-b border-outline-variant group-hover:bg-surface-container-low transition-colors px-4"
+            >
+              <span class="text-4xl font-headline font-bold text-primary"
+                >2012</span
+              >
+            </div>
+            <div
+              class="md:col-span-10 py-12 border-b border-outline-variant group-hover:bg-surface-container-low transition-colors px-4"
+            >
+              <h3 class="text-xl font-bold mb-2">Vertical Integration</h3>
+              <p class="text-on-surface-variant max-w-2xl">
+                Expansion into full-scale design-build operations, merging
+                architectural vision with on-site engineering execution.
+              </p>
+            </div>
+          </div>
+          <!-- Timeline Item 3 -->
+          <div class="grid grid-cols-1 md:grid-cols-12 group cursor-default">
+            <div
+              class="md:col-span-2 py-12 border-b border-outline-variant group-hover:bg-surface-container-low transition-colors px-4"
+            >
+              <span class="text-4xl font-headline font-bold text-primary"
+                >2024</span
+              >
+            </div>
+            <div
+              class="md:col-span-10 py-12 border-b border-outline-variant group-hover:bg-surface-container-low transition-colors px-4"
+            >
+              <h3 class="text-xl font-bold mb-2">The Monolith Era</h3>
+              <p class="text-on-surface-variant max-w-2xl">
+                Celebrating 20 years of precision with over 150 completed
+                high-integrity structures across the continent.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Leadership: Structural Cards -->
+      <section class="bg-surface-container-low py-32 px-8 md:px-24">
+        <div
+          class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
+        >
+          <div>
+            <span
+              class="label-md uppercase tracking-[0.2em] text-secondary font-bold"
+              >GOVERNANCE</span
+            >
+            <h2 class="text-5xl font-bold tracking-tighter text-primary mt-4">
+              Leadership
+            </h2>
+          </div>
+          <p class="max-w-md text-on-surface-variant italic">
+            "Architecture is the learned game, correct and magnificent, of forms
+            assembled in the light."
+          </p>
+        </div>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 gap-1 px-1 bg-outline-variant"
+        >
+          <!-- Principal Architect -->
+          <div class="bg-surface p-12">
+            <div
+              class="aspect-[4/5] bg-surface-container-highest mb-8 overflow-hidden"
+            >
+              <img
+                alt="Principal Architect"
+                class="w-full h-full object-cover grayscale contrast-125"
+                data-alt="Black and white professional portrait of a senior architect with glasses, looking thoughtful, sharp studio lighting, architectural office background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5zrignZh3vIIEcolmtwSIjPyXRnM_REc3IMQ3DbhUk1J-8CsWqTLK79wKUkt0fDw9a1XJcIj1j80L55Gx-bODhJCU2HYQFT3po816oKitbyxoLOBN7r0_cJD0de_zk3YmyXiLIEnN_NDPqdHIjmCihijBa2nvGYZcAdfI82PXd0-aiVfI2SCbYb44-OiDh2pbJYJxnk_fqlykoJmNNlQp4s0mgDRa0nz3bc4pRBEs_Jhioa8k3LB5HI5XC4aGLZ0qbcF73ZVggimS"
+              />
+            </div>
+            <div
+              class="inline-block bg-primary-container text-on-primary-container px-4 py-1 text-xs uppercase tracking-widest font-bold mb-6"
+            >
+              Principal Architect
+            </div>
+            <h3 class="text-3xl font-bold text-primary mb-4">Julian Varas</h3>
+            <p class="text-on-surface-variant leading-relaxed mb-8">
+              With three decades of experience in brutalist and contemporary
+              commercial design, Julian leads the creative vision, ensuring
+              every project challenges the standard tropes of modern building.
+            </p>
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-secondary">link</span>
+              <span class="material-symbols-outlined text-secondary">mail</span>
+            </div>
+          </div>
+          <!-- Lead Structural Engineer -->
+          <div class="bg-surface p-12">
+            <div
+              class="aspect-[4/5] bg-surface-container-highest mb-8 overflow-hidden"
+            >
+              <img
+                alt="Lead Structural Engineer"
+                class="w-full h-full object-cover grayscale contrast-125"
+                data-alt="Professional portrait of a woman engineer in a dark blazer, confident expression, minimalist white background, soft editorial lighting"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8GWjK4WUvVsdqQ78GTsoAr3tIEuHjdNHaq3H4w99wCtD0gkB0ay_zwA0NsEX-UvoIcT3ALhtOof6LWdwUH7GLfyk0ojIecl8GlORRnYvgVoDZ47tjkxW895yrZAnlLzLh-yA2pBfcjQuE6cJmY0qTUy0CMLlapES-z3vhbIses-7l2THxCCCnoy4hDfk2EYLSIJ-fkOX_cnRkFw_g4qb3ygbfXnuqHGPS3Zj2EiY8IPI-qXE7-VjYApR9pv5jY_p33ZnfxzrvU1jy"
+              />
+            </div>
+            <div
+              class="inline-block bg-secondary text-white px-4 py-1 text-xs uppercase tracking-widest font-bold mb-6"
+            >
+              Lead Structural Engineer
+            </div>
+            <h3 class="text-3xl font-bold text-primary mb-4">
+              Dr. Elena Thorne
+            </h3>
+            <p class="text-on-surface-variant leading-relaxed mb-8">
+              A specialist in seismic resilience and advanced materials, Elena
+              oversees the technical backbone of Prodisenyo. Her work ensures
+              that aesthetic beauty never compromises structural permanence.
+            </p>
+            <div class="flex gap-4">
+              <span class="material-symbols-outlined text-secondary">link</span>
+              <span class="material-symbols-outlined text-secondary">mail</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA Section -->
+      <section
+        class="bg-[#0a1a1e] py-24 px-12 relative overflow-hidden border-t border-white/5"
+      >
+        <div
+          class="absolute inset-0 opacity-[0.03] pointer-events-none select-none"
+          style="
+            background-image: radial-gradient(#14b8a6 0.5px, transparent 0.5px);
+            background-size: 40px 40px;
+          "
+        ></div>
+
+        <div class="max-w-[1920px] mx-auto relative z-10">
+          <div
+            class="flex flex-col lg:flex-row items-center justify-between gap-12"
+          >
+            <div class="text-left max-w-2xl">
+              <div class="flex items-center gap-3 mb-6">
+                <span
+                  class="text-[#14b8a6] font-black text-[9px] uppercase tracking-[0.6em]"
+                  >Inquiry_Portal // 2026</span
+                >
+                <div class="h-px w-10 bg-[#14b8a6]/30"></div>
+              </div>
+
+              <h2
+                class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9] uppercase"
+              >
+                Build Your <br />
+                <span
+                  class="text-transparent"
+                  style="-webkit-text-stroke: 1px rgba(20, 184, 166, 0.4)"
+                  >Landmark.</span
+                >
+              </h2>
+            </div>
+
+            <div class="flex flex-col items-center lg:items-end gap-6">
+              <button
+                class="group relative bg-[#14b8a6] text-[#0a1a1e] px-12 py-6 font-black uppercase tracking-[0.3em] text-[10px] transition-all duration-500 hover:bg-white"
+              >
+                Collaborate with us
+                <span
+                  class="ml-4 transition-transform group-hover:translate-x-2 inline-block"
+                  >→</span
+                >
+              </button>
+
+              <div class="flex items-center gap-6">
+                <div class="flex flex-col items-end">
+                  <span
+                    class="text-[8px] font-bold text-white/20 uppercase tracking-[0.4em]"
+                    >Response Index</span
+                  >
+                  <span
+                    class="text-[10px] font-black text-white/40 uppercase tracking-widest"
+                    >Priority_Active</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute bottom-0 right-0 w-32 h-32 opacity-10 pointer-events-none"
+        >
+          <svg
+            viewBox="0 0 100 100"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M100 0V100H0" stroke="#14b8a6" stroke-width="0.5" />
+          </svg>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#0a1a1e] text-white w-full border-t border-white/5">
+      <div
+        class="w-full px-12 py-24 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-24"
+      >
+        <div class="space-y-8">
+          <div
+            class="text-2xl font-black uppercase tracking-tighter leading-none"
+          >
+            Prodisenyo <br />
+            <span class="text-[#14b8a6]">Builders</span>
+          </div>
+          <p class="text-sm font-medium text-white/40 max-w-xs leading-relaxed">
+            Leading the industry in structural precision and modern
+            architectural construction. Precision in every joint, integrity in
+            every structure.
+          </p>
+          <div class="flex gap-4">
+            <div class="w-8 h-[2px] bg-[#14b8a6]"></div>
+            <span
+              class="text-[9px] font-black uppercase tracking-[0.4em] text-white/20"
+              >Est. 1998</span
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <h5
+            class="font-black text-[10px] tracking-[0.5em] text-[#14b8a6] uppercase"
+          >
+            Governance
+          </h5>
+          <nav class="flex flex-col gap-4">
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Terms of Service</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Cookie Policy</a
+            >
+          </nav>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <h5
+            class="font-black text-[10px] tracking-[0.5em] text-[#14b8a6] uppercase"
+          >
+            Social Index
+          </h5>
+          <nav class="flex flex-col gap-4">
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >LinkedIn</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Instagram</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >ArchDaily</a
+            >
+          </nav>
+        </div>
+
+        <div class="lg:border-l border-white/5 lg:pl-12 space-y-8">
+          <div>
+            <h5
+              class="font-black text-[10px] tracking-[0.5em] text-[#14b8a6] uppercase mb-6"
+            >
+              Headquarters
+            </h5>
+            <p class="text-sm font-bold text-white leading-relaxed">
+              1248 Structure Ave, Design District<br />
+              Manila, Philippines
+            </p>
+          </div>
+          <div>
+            <a
+              class="text-sm font-black text-white hover:text-[#14b8a6] transition-colors tracking-tighter"
+              href="mailto:contact@prodisenyo.com"
+            >
+              CONTACT@PRODISENYO.COM
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-full px-6 md:px-20 py-12 border-t border-white/5 bg-black/20"
+      >
+        <div
+          class="max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+          <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+            <span
+              class="text-[10px] font-bold text-white/20 uppercase tracking-[0.3em]"
+            >
+              © 2026 Prodisenyo Builders
+            </span>
+            <span class="hidden md:block w-px h-3 bg-white/10"></span>
+            <span
+              class="text-[10px] font-bold text-white/20 uppercase tracking-[0.3em]"
+            >
+              Precision in Structure
+            </span>
+          </div>
+
+          <div class="flex gap-10 opacity-20 group">
+            <span
+              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
+              >architecture</span
+            >
+            <span
+              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
+              >engineering</span
+            >
+            <span
+              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
+              >apartment</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

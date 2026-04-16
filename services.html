@@ -1,0 +1,728 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Services | Prodisenyo Builders</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#e0e3e5",
+              error: "#ba1a1a",
+              "surface-bright": "#f7fafc",
+              "on-secondary-container": "#007165",
+              "tertiary-fixed": "#eddcff",
+              "inverse-on-surface": "#eef1f3",
+              "on-surface": "#181c1e",
+              "on-secondary-fixed": "#00201c",
+              "surface-container-lowest": "#ffffff",
+              "on-error-container": "#93000a",
+              "surface-container-low": "#f1f4f6",
+              "inverse-primary": "#a5cdda",
+              "on-tertiary-container": "#d8c2f2",
+              "on-primary-fixed": "#001f27",
+              "on-primary-container": "#a9d1df",
+              "tertiary-container": "#5f4e77",
+              "surface-dim": "#d7dadc",
+              surface: "#f7fafc",
+              "tertiary-fixed-dim": "#d3beee",
+              "primary-fixed": "#c0e9f7",
+              "error-container": "#ffdad6",
+              "secondary-fixed": "#8df5e4",
+              "on-primary": "#ffffff",
+              "on-error": "#ffffff",
+              "secondary-container": "#8df5e4",
+              "on-primary-fixed-variant": "#244c57",
+              "outline-variant": "#bfc8c8",
+              "on-tertiary-fixed": "#231339",
+              "inverse-surface": "#2d3133",
+              "primary-fixed-dim": "#a5cdda",
+              "secondary-fixed-dim": "#70d8c8",
+              "on-secondary": "#ffffff",
+              primary: "#1b434e",
+              "primary-container": "#345b66",
+              "on-surface-variant": "#404849",
+              "on-secondary-fixed-variant": "#005048",
+              outline: "#707979",
+              "on-tertiary": "#ffffff",
+              "surface-container": "#ebeef0",
+              tertiary: "#47375e",
+              "on-tertiary-fixed-variant": "#503f67",
+              background: "#f7fafc",
+              "on-background": "#181c1e",
+              secondary: "#006b5f",
+              "surface-tint": "#3d6470",
+              "surface-container-highest": "#e0e3e5",
+              "surface-container-high": "#e5e9eb",
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Space Grotesk"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .font-headline {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .vertical-text {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface selection:bg-secondary/30">
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/10"
+    >
+      <div
+        class="flex justify-between items-center w-full px-12 py-3 max-w-[1920px] mx-auto"
+      >
+        <div class="text-xl font-bold tracking-tighter text-white">
+          Prodisenyo Builders
+        </div>
+        <div class="hidden md:flex gap-10 items-center">
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white transition-colors duration-300"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="portfolio.html"
+            >Projects</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 border-b-2 border-white pb-1 hover:text-white transition-colors duration-300"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="contact.html"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
+        >
+          Get Quote
+        </button>
+      </div>
+    </nav>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="bg-[#0a1a1e] p-12 grid grid-cols-12 gap-0 relative overflow-hidden border-t border-white/5"
+      >
+        <div class="col-span-12 md:col-span-8 py-20 relative z-10">
+          <div class="flex items-center gap-4 mb-10">
+            <span
+              class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.5em]"
+              >System_Capabilities // 01</span
+            >
+            <div class="h-px w-16 bg-white/10"></div>
+          </div>
+
+          <h1
+            class="text-6xl md:text-[8rem] font-black text-white leading-[0.8] tracking-tighter mb-12 uppercase"
+          >
+            We build the <br />
+            <span class="text-[#14b8a6]">Infrastructure</span> <br />
+            <span class="text-white/20">of tomorrow.</span>
+          </h1>
+
+          <div class="flex flex-col md:flex-row gap-12 items-start">
+            <p
+              class="text-xl text-white/50 max-w-xl leading-relaxed font-medium"
+            >
+              Merging structural precision with avant-garde architectural
+              vision. We provide end-to-end technical solutions for the modern
+              built environment.
+            </p>
+
+            <div class="border-l border-[#14b8a6] pl-6 py-2">
+              <span
+                class="block text-[9px] font-black text-[#14b8a6] uppercase tracking-[0.4em] mb-1"
+                >Precision Rating</span
+              >
+              <span
+                class="block text-white font-bold tracking-tighter uppercase"
+                >99.9% Tolerance</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="hidden md:flex col-span-4 items-center justify-end overflow-hidden"
+        >
+          <div
+            class="rotate-90 origin-center text-[12rem] font-black text-white/[0.02] leading-none select-none pointer-events-none tracking-tighter uppercase whitespace-nowrap"
+          >
+            Services // 2026
+          </div>
+        </div>
+
+        <div
+          class="absolute right-0 top-0 w-1/3 h-full bg-white/[0.01] border-l border-white/5 -z-10"
+        ></div>
+
+        <div class="absolute bottom-10 left-6 md:left-20 flex gap-10">
+          <span
+            class="text-[9px] font-bold text-white/10 uppercase tracking-[0.5em]"
+            >Structural_Core_V4</span
+          >
+          <span
+            class="text-[9px] font-bold text-white/10 uppercase tracking-[0.5em]"
+            >000.142.99</span
+          >
+        </div>
+      </section>
+
+      <section class="bg-[#0a1a1e] border-t border-white/5">
+        <div class="grid grid-cols-12 min-h-[750px]">
+          <div class="col-span-12 lg:col-span-7 overflow-hidden relative group">
+            <img
+              class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
+              alt="Macro view of high-tensile steel joints and architectural blueprints"
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2000&auto=format&fit=crop"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#0a1a1e] via-transparent to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 p-12 md:p-20 flex flex-col justify-end"
+            >
+              <span
+                class="text-8xl font-black text-white/10 mb-2 tracking-tighter"
+                >01</span
+              >
+              <h2
+                class="text-5xl font-black text-white uppercase tracking-tighter leading-none"
+              >
+                Structural <br /><span class="text-[#14b8a6]">Engineering</span>
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="col-span-12 lg:col-span-5 bg-[#0c1f24] p-12 md:p-24 flex flex-col justify-center border-l border-white/5"
+          >
+            <div class="max-w-md">
+              <h3
+                class="text-[10px] font-black uppercase tracking-[0.5em] text-[#14b8a6] mb-8"
+              >
+                Precision First
+              </h3>
+              <p
+                class="text-2xl text-white/70 leading-tight font-medium mb-12 tracking-tight"
+              >
+                Our engineering core focuses on the integrity of complex
+                systems. From seismic analysis to advanced material science.
+              </p>
+
+              <ul class="space-y-6 border-t border-white/10 pt-10">
+                <li class="flex items-start gap-5 group">
+                  <span class="material-symbols-outlined text-[#14b8a6] mt-1"
+                    >architecture</span
+                  >
+                  <div>
+                    <span
+                      class="block text-white font-bold uppercase tracking-tight"
+                      >Seismic & Wind Load Analysis</span
+                    >
+                    <span
+                      class="text-xs text-white/30 uppercase tracking-widest"
+                      >Simulation Grade: AAA</span
+                    >
+                  </div>
+                </li>
+                <li class="flex items-start gap-5">
+                  <span class="material-symbols-outlined text-[#14b8a6] mt-1"
+                    >settings_input_component</span
+                  >
+                  <div>
+                    <span
+                      class="block text-white font-bold uppercase tracking-tight"
+                      >MEP System Integration</span
+                    >
+                    <span
+                      class="text-xs text-white/30 uppercase tracking-widest"
+                      >Unified Digital Twin</span
+                    >
+                  </div>
+                </li>
+                <li class="flex items-start gap-5">
+                  <span class="material-symbols-outlined text-[#14b8a6] mt-1"
+                    >precision_manufacturing</span
+                  >
+                  <div>
+                    <span
+                      class="block text-white font-bold uppercase tracking-tight"
+                      >Material stress simulation</span
+                    >
+                    <span
+                      class="text-xs text-white/30 uppercase tracking-widest"
+                      >Finite Element Method</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[#0a1a1e] border-t border-white/5">
+        <div class="grid grid-cols-12 min-h-[750px]">
+          <div
+            class="col-span-12 lg:col-span-5 bg-[#0c1f24] p-12 md:p-24 flex flex-col justify-center order-2 lg:order-1 border-r border-white/5"
+          >
+            <div class="max-w-md ml-auto">
+              <h3
+                class="text-[10px] font-black uppercase tracking-[0.5em] text-[#14b8a6] mb-8"
+              >
+                Aesthetic Utility
+              </h3>
+              <p
+                class="text-2xl text-white/70 leading-tight font-medium mb-12 tracking-tight"
+              >
+                Designing monolithic spaces that breathe. Our philosophy centers
+                on balance through mass and light.
+              </p>
+
+              <div
+                class="grid grid-cols-2 gap-px bg-white/5 border border-white/5"
+              >
+                <div
+                  class="p-8 bg-[#0a1a1e] group hover:bg-[#14b8a6]/5 transition-colors"
+                >
+                  <span
+                    class="text-[9px] font-black text-[#14b8a6] uppercase block mb-3 tracking-[0.3em]"
+                    >Phase I</span
+                  >
+                  <span class="text-sm font-bold text-white uppercase"
+                    >Conceptual Drafting</span
+                  >
+                </div>
+                <div
+                  class="p-8 bg-[#0a1a1e] group hover:bg-[#14b8a6]/5 transition-colors"
+                >
+                  <span
+                    class="text-[9px] font-black text-[#14b8a6] uppercase block mb-3 tracking-[0.3em]"
+                    >Phase II</span
+                  >
+                  <span class="text-sm font-bold text-white uppercase"
+                    >3D Visualization</span
+                  >
+                </div>
+                <div
+                  class="p-8 bg-[#0a1a1e] group hover:bg-[#14b8a6]/5 transition-colors"
+                >
+                  <span
+                    class="text-[9px] font-black text-[#14b8a6] uppercase block mb-3 tracking-[0.3em]"
+                    >Phase III</span
+                  >
+                  <span class="text-sm font-bold text-white uppercase"
+                    >Detail Design</span
+                  >
+                </div>
+                <div
+                  class="p-8 bg-[#0a1a1e] group hover:bg-[#14b8a6]/5 transition-colors"
+                >
+                  <span
+                    class="text-[9px] font-black text-[#14b8a6] uppercase block mb-3 tracking-[0.3em]"
+                    >Phase IV</span
+                  >
+                  <span class="text-sm font-bold text-white uppercase"
+                    >Permit Support</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="col-span-12 lg:col-span-7 overflow-hidden relative group order-1 lg:order-2"
+          >
+            <img
+              class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
+              alt="Angular glass facade of a modern minimalist skyscraper"
+              src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?q=80&w=2000&auto=format&fit=crop"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#0a1a1e] via-transparent to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 p-12 md:p-20 flex flex-col justify-end text-right"
+            >
+              <span
+                class="text-8xl font-black text-white/10 mb-2 tracking-tighter"
+                >02</span
+              >
+              <h2
+                class="text-5xl font-black text-white uppercase tracking-tighter leading-none"
+              >
+                Architectural <br /><span class="text-[#14b8a6]">Vision</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-[#0a1a1e] border-y border-white/5">
+        <div class="grid grid-cols-12 min-h-[750px]">
+          <div class="col-span-12 lg:col-span-7 overflow-hidden relative group">
+            <img
+              class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000 grayscale group-hover:grayscale-0"
+              alt="Construction site manager with safety gear in a precision environment"
+              src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=2000&auto=format&fit=crop"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-[#0a1a1e] via-transparent to-transparent"
+            ></div>
+            <div
+              class="absolute inset-0 p-12 md:p-20 flex flex-col justify-end"
+            >
+              <span
+                class="text-8xl font-black text-white/10 mb-2 tracking-tighter"
+                >03</span
+              >
+              <h2
+                class="text-5xl font-black text-white uppercase tracking-tighter leading-none"
+              >
+                Construction <br /><span class="text-[#14b8a6]"
+                  >Management</span
+                >
+              </h2>
+            </div>
+          </div>
+
+          <div
+            class="col-span-12 lg:col-span-5 bg-[#0c1f24] p-12 md:p-24 flex flex-col justify-center border-l border-white/5"
+          >
+            <div class="max-w-md">
+              <h3
+                class="text-[10px] font-black uppercase tracking-[0.5em] text-[#14b8a6] mb-8"
+              >
+                Absolute Execution
+              </h3>
+              <p
+                class="text-2xl text-white/70 leading-tight font-medium mb-12 tracking-tight"
+              >
+                We bridge the gap between design and reality. Our management
+                teams ensure timelines are met with uncompromising standards.
+              </p>
+
+              <div class="space-y-12">
+                <div class="flex gap-8 group">
+                  <div
+                    class="w-14 h-14 bg-[#14b8a6] text-[#0a1a1e] flex items-center justify-center shrink-0 transition-transform group-hover:rotate-12"
+                  >
+                    <span class="material-symbols-outlined font-black"
+                      >monitoring</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="font-black text-white uppercase tracking-tight mb-2"
+                    >
+                      Real-time Oversight
+                    </h4>
+                    <p class="text-sm text-white/40 leading-relaxed">
+                      Daily reporting and digital milestone tracking for full
+                      transparency across all stakeholders.
+                    </p>
+                  </div>
+                </div>
+                <div class="flex gap-8 group">
+                  <div
+                    class="w-14 h-14 bg-[#14b8a6] text-[#0a1a1e] flex items-center justify-center shrink-0 transition-transform group-hover:rotate-12"
+                  >
+                    <span class="material-symbols-outlined font-black"
+                      >verified</span
+                    >
+                  </div>
+                  <div>
+                    <h4
+                      class="font-black text-white uppercase tracking-tight mb-2"
+                    >
+                      QA/QC Protocols
+                    </h4>
+                    <p class="text-sm text-white/40 leading-relaxed">
+                      Rigorous testing phases at every stage of the build cycle
+                      to ensure zero-defect delivery.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section: Asymmetric -->
+      <section class="px-6 md:px-20 py-20 relative">
+        <div
+          class="bg-[#0c1f24] p-12 grid grid-cols-12 gap-8 relative overflow-hidden border border-white/5 shadow-2xl"
+        >
+          <div
+            class="absolute inset-0 opacity-[0.03] pointer-events-none"
+            style="
+              background-image:
+                linear-gradient(#14b8a6 1px, transparent 1px),
+                linear-gradient(90deg, #14b8a6 1px, transparent 1px);
+              background-size: 80px 80px;
+            "
+          ></div>
+
+          <div class="col-span-12 lg:col-span-8 relative z-10">
+            <div class="flex items-center gap-4 mb-10">
+              <span
+                class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.5em]"
+                >Project_Commencement // 2026</span
+              >
+              <div class="h-px w-20 bg-white/10"></div>
+            </div>
+
+            <h2
+              class="text-5xl md:text-6xl font-black text-white mb-10 tracking-tighter leading-[0.85] uppercase"
+            >
+              Ready to commence your <br />
+              <span class="text-[#14b8a6]">Next Landmark</span> project?
+            </h2>
+
+            <p
+              class="text-white/50 text-xl font-medium mb-12 max-w-xl leading-relaxed"
+            >
+              Consult with our principal engineers and architects to explore
+              technical feasibilities, design narratives, and monolithic
+              structural integrity.
+            </p>
+
+            <button
+              class="group relative bg-[#14b8a6] text-[#0a1a1e] px-14 py-6 font-black uppercase tracking-[0.2em] text-xs transition-all duration-500 hover:scale-[1.02]"
+            >
+              Inquire Now
+              <span
+                class="ml-4 transition-transform group-hover:translate-x-2 inline-block"
+                >→</span
+              >
+            </button>
+          </div>
+
+          <div
+            class="hidden lg:flex col-span-4 flex-col justify-end items-end relative z-10"
+          >
+            <div
+              class="text-right space-y-4 border-r-2 border-[#14b8a6] pr-8 py-2"
+            >
+              <div
+                class="text-[10px] font-black text-white/20 uppercase tracking-[0.4em]"
+              >
+                System Status
+              </div>
+              <div class="text-white font-bold uppercase tracking-tight">
+                Accepting Commissions
+              </div>
+              <div
+                class="text-[#14b8a6] font-black text-xs uppercase tracking-widest"
+              >
+                Global Operations v4.0
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="absolute -right-16 -top-16 w-64 h-64 border-t border-r border-[#14b8a6]/20 pointer-events-none"
+          ></div>
+          <div
+            class="absolute -left-16 -bottom-16 w-64 h-64 border-b border-l border-[#14b8a6]/20 pointer-events-none"
+          ></div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-[#0a1a1e] text-white w-full border-t border-white/5">
+      <div
+        class="w-full px-12 py-24 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-24"
+      >
+        <div class="space-y-8">
+          <div
+            class="text-2xl font-black uppercase tracking-tighter leading-none"
+          >
+            Prodisenyo <br />
+            <span class="text-[#14b8a6]">Builders</span>
+          </div>
+          <p class="text-sm font-medium text-white/40 max-w-xs leading-relaxed">
+            Leading the industry in structural precision and modern
+            architectural construction. Precision in every joint, integrity in
+            every structure.
+          </p>
+          <div class="flex gap-4">
+            <div class="w-8 h-[2px] bg-[#14b8a6]"></div>
+            <span
+              class="text-[9px] font-black uppercase tracking-[0.4em] text-white/20"
+              >Est. 1998</span
+            >
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <h5
+            class="font-black text-[10px] tracking-[0.5em] text-[#14b8a6] uppercase"
+          >
+            Governance
+          </h5>
+          <nav class="flex flex-col gap-4">
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Privacy Policy</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Terms of Service</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Cookie Policy</a
+            >
+          </nav>
+        </div>
+
+        <div class="flex flex-col gap-6">
+          <h5
+            class="font-black text-[10px] tracking-[0.5em] text-[#14b8a6] uppercase"
+          >
+            Social Index
+          </h5>
+          <nav class="flex flex-col gap-4">
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >LinkedIn</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >Instagram</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="#"
+              >ArchDaily</a
+            >
+          </nav>
+        </div>
+
+        <div class="lg:border-l border-white/5 lg:pl-12 space-y-8">
+          <div>
+            <h5
+              class="font-black text-[10px] tracking-[0.5em] text-[#14b8a6] uppercase mb-6"
+            >
+              Headquarters
+            </h5>
+            <p class="text-sm font-bold text-white leading-relaxed">
+              1248 Structure Ave, Design District<br />
+              Manila, Philippines
+            </p>
+          </div>
+          <div>
+            <a
+              class="text-sm font-black text-white hover:text-[#14b8a6] transition-colors tracking-tighter"
+              href="mailto:contact@prodisenyo.com"
+            >
+              CONTACT@PRODISENYO.COM
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="w-full px-6 md:px-20 py-12 border-t border-white/5 bg-black/20"
+      >
+        <div
+          class="max-w-[1920px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
+        >
+          <div class="flex flex-col md:flex-row items-center gap-4 md:gap-8">
+            <span
+              class="text-[10px] font-bold text-white/20 uppercase tracking-[0.3em]"
+            >
+              © 2026 Prodisenyo Builders
+            </span>
+            <span class="hidden md:block w-px h-3 bg-white/10"></span>
+            <span
+              class="text-[10px] font-bold text-white/20 uppercase tracking-[0.3em]"
+            >
+              Precision in Structure
+            </span>
+          </div>
+
+          <div class="flex gap-10 opacity-20 group">
+            <span
+              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
+              >architecture</span
+            >
+            <span
+              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
+              >engineering</span
+            >
+            <span
+              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
+              >apartment</span
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

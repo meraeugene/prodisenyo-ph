@@ -1,0 +1,793 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "tertiary-container": "#5f4e77",
+              "on-primary-fixed": "#001f27",
+              "secondary-fixed": "#8df5e4",
+              "secondary-container": "#8df5e4",
+              "surface-container-lowest": "#ffffff",
+              outline: "#707979",
+              "outline-variant": "#bfc8c8",
+              "surface-dim": "#d7dadc",
+              "surface-tint": "#3d6470",
+              "surface-container": "#ebeef0",
+              "on-primary-fixed-variant": "#244c57",
+              "on-tertiary-fixed-variant": "#503f67",
+              error: "#ba1a1a",
+              "on-tertiary-container": "#d8c2f2",
+              "surface-container-highest": "#e0e3e5",
+              "on-secondary-fixed": "#00201c",
+              "inverse-primary": "#a5cdda",
+              "on-surface-variant": "#404849",
+              "tertiary-fixed-dim": "#d3beee",
+              tertiary: "#47375e",
+              "on-error-container": "#93000a",
+              surface: "#f7fafc",
+              "on-secondary-fixed-variant": "#005048",
+              "on-tertiary": "#ffffff",
+              "on-secondary": "#ffffff",
+              "on-error": "#ffffff",
+              "surface-container-low": "#f1f4f6",
+              background: "#f7fafc",
+              "surface-variant": "#e0e3e5",
+              "on-background": "#181c1e",
+              "inverse-on-surface": "#eef1f3",
+              "error-container": "#ffdad6",
+              "primary-container": "#345b66",
+              primary: "#1b434e",
+              "surface-container-high": "#e5e9eb",
+              "on-secondary-container": "#007165",
+              "tertiary-fixed": "#eddcff",
+              "surface-bright": "#f7fafc",
+              "primary-fixed-dim": "#a5cdda",
+              "primary-fixed": "#c0e9f7",
+              secondary: "#006b5f",
+              "on-surface": "#181c1e",
+              "on-primary": "#ffffff",
+              "inverse-surface": "#2d3133",
+              "secondary-fixed-dim": "#70d8c8",
+              "on-tertiary-fixed": "#231339",
+              "on-primary-container": "#a9d1df",
+            },
+            borderRadius: {
+              DEFAULT: "0px",
+              lg: "0px",
+              xl: "0px",
+              full: "9999px",
+            },
+            fontFamily: {
+              headline: ["Space Grotesk"],
+              body: ["Inter"],
+              label: ["Inter"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .font-headline {
+        font-family: "Space Grotesk", sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface selection:bg-secondary selection:text-on-secondary"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/10"
+    >
+      <div
+        class="flex justify-between items-center w-full px-12 py-3 max-w-[1920px] mx-auto"
+      >
+        <div class="text-xl font-bold tracking-tighter text-white">
+          Prodisenyo Builders
+        </div>
+        <div class="hidden md:flex gap-10 items-center">
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white transition-colors duration-300"
+            href="index.html"
+            >Home</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300 border-b-2 border-white pb-1"
+            href="projects.html"
+            >Projects</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="about.html"
+            >About</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-[0.875rem] font-medium text-white/70 hover:text-white transition-colors duration-300"
+            href="contact.html"
+            >Contact</a
+          >
+        </div>
+        <button
+          class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
+        >
+          Get Quote
+        </button>
+      </div>
+    </nav>
+    <main>
+      <!-- Hero Section -->
+      <section
+        class="relative w-full min-h-screen bg-[#0a1a1e] overflow-hidden flex flex-col justify-end"
+      >
+        <div class="absolute inset-0 z-0">
+          <img
+            alt="The Meridian Atrium"
+            class="w-full h-full object-cover opacity-70 grayscale"
+            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+          />
+          <div
+            class="absolute inset-0 bg-gradient-to-r from-[#0a1a1e] via-[#0a1a1e]/40 to-transparent"
+          ></div>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-[#0a1a1e] via-transparent to-transparent"
+          ></div>
+        </div>
+
+        <div
+          class="relative z-10 px-12 pb-16 md:pb-24 max-w-[1920px] w-full mx-auto"
+        >
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
+            <div class="lg:col-span-8">
+              <div class="flex items-center gap-4 mb-8">
+                <span
+                  class="bg-[#14b8a6] text-white px-3 py-1 text-[10px] font-black uppercase tracking-[0.3em]"
+                >
+                  Case Study 01
+                </span>
+                <div class="h-px w-24 bg-white/20"></div>
+                <span
+                  class="text-white/40 text-[10px] font-bold uppercase tracking-[0.3em]"
+                  >Completed 2025</span
+                >
+              </div>
+
+              <h1
+                class="text-5xl md:text-[7rem] font-black text-white leading-[0.9] tracking-tighter uppercase mb-8"
+              >
+                The Meridian <br />
+                <span class="text-[#14b8a6]">Atrium</span>
+              </h1>
+
+              <p
+                class="text-white/80 max-w-2xl font-medium text-xl md:text-2xl leading-relaxed"
+              >
+                Engineering a high-density commercial hub through the lens of
+                structural honesty and suspended mass.
+              </p>
+            </div>
+
+            <div
+              class="lg:col-span-4 border-l border-white/10 pl-8 space-y-8 hidden lg:block"
+            >
+              <div>
+                <div
+                  class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 mb-2"
+                >
+                  Location
+                </div>
+                <div
+                  class="text-sm font-bold text-white uppercase tracking-widest"
+                >
+                  Financial District / Central
+                </div>
+              </div>
+              <div>
+                <div
+                  class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 mb-2"
+                >
+                  Scope
+                </div>
+                <div
+                  class="text-sm font-bold text-white uppercase tracking-widest"
+                >
+                  Structural Engineering & BIM
+                </div>
+              </div>
+              <div>
+                <div
+                  class="text-[10px] font-bold uppercase tracking-[0.4em] text-white/30 mb-2"
+                >
+                  Status
+                </div>
+                <div
+                  class="text-sm font-bold text-teal-400 uppercase tracking-widest flex items-center gap-2"
+                >
+                  <span
+                    class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"
+                  ></span>
+                  Operational
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute top-1/2 right-[-5%] rotate-90 text-[10rem] font-black text-white/[0.02] select-none pointer-events-none uppercase"
+        >
+          Verticality
+        </div>
+      </section>
+
+      <!-- Technical Specifications Table -->
+      <section class="bg-[#0a1a1e] py-32 px-12 border-t border-white/5">
+        <div>
+          <div class="flex flex-col lg:flex-row gap-20">
+            <div class="lg:w-1/3">
+              <div class="flex items-center gap-4 mb-8">
+                <span class="w-10 h-px bg-[#14b8a6]"></span>
+                <span
+                  class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.5em]"
+                  >Data Sheet // 2026</span
+                >
+              </div>
+
+              <h2
+                class="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.9]"
+              >
+                Technical <br />
+                <span class="text-white/20">Specs</span>
+              </h2>
+
+              <p
+                class="text-white/60 font-medium text-lg md:text-xl leading-relaxed max-w-sm"
+              >
+                The structural integrity of The Meridian Atrium relies on a
+                central concrete core augmented by peripheral steel bracing.
+              </p>
+
+              <div class="mt-12 opacity-20 hidden lg:block">
+                <svg
+                  width="100"
+                  height="100"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="40"
+                    y="10"
+                    width="20"
+                    height="80"
+                    stroke="white"
+                    stroke-width="2"
+                  />
+                  <path
+                    d="M10 90L40 50M90 90L60 50M10 10L40 50M90 10L60 50"
+                    stroke="#14b8a6"
+                    stroke-width="2"
+                  />
+                </svg>
+              </div>
+            </div>
+
+            <div class="lg:w-2/3">
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/10 border border-white/10"
+              >
+                <div
+                  class="bg-[#0c1f24] p-10 flex flex-col justify-between group hover:bg-[#112a31] transition-all duration-500"
+                >
+                  <span
+                    class="font-black uppercase tracking-[0.4em] text-[10px] text-[#14b8a6] mb-12"
+                  >
+                    01 / Building Height
+                  </span>
+                  <div class="flex items-baseline gap-3">
+                    <span
+                      class="text-6xl font-black text-white tracking-tighter"
+                      >312.5</span
+                    >
+                    <span
+                      class="text-xs font-bold text-white/40 uppercase tracking-[0.2em]"
+                      >Meters</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="bg-[#0c1f24] p-10 flex flex-col justify-between group hover:bg-[#112a31] transition-all duration-500"
+                >
+                  <span
+                    class="font-black uppercase tracking-[0.4em] text-[10px] text-[#14b8a6] mb-12"
+                  >
+                    02 / Primary Materials
+                  </span>
+                  <span
+                    class="text-2xl font-black text-white uppercase tracking-tight leading-tight"
+                  >
+                    High-Tensile Steel <br />
+                    <span class="text-white/40">& Low-E Glass</span>
+                  </span>
+                </div>
+
+                <div
+                  class="bg-[#0c1f24] p-10 flex flex-col justify-between group hover:bg-[#112a31] transition-all duration-500"
+                >
+                  <span
+                    class="font-black uppercase tracking-[0.4em] text-[10px] text-[#14b8a6] mb-12"
+                  >
+                    03 / Square Footage
+                  </span>
+                  <div class="flex items-baseline gap-3">
+                    <span
+                      class="text-6xl font-black text-white tracking-tighter"
+                      >1.2</span
+                    >
+                    <span
+                      class="text-xs font-bold text-white/40 uppercase tracking-[0.2em]"
+                      >Million SQ FT</span
+                    >
+                  </div>
+                </div>
+
+                <div
+                  class="bg-[#0c1f24] p-10 flex flex-col justify-between group hover:bg-[#112a31] transition-all duration-500"
+                >
+                  <span
+                    class="font-black uppercase tracking-[0.4em] text-[10px] text-[#14b8a6] mb-12"
+                  >
+                    04 / Structural Type
+                  </span>
+                  <span
+                    class="text-2xl font-black text-white uppercase tracking-tight leading-tight"
+                  >
+                    Steel Diagrid <br />
+                    <span class="text-white/40">Shell System</span>
+                  </span>
+                </div>
+              </div>
+
+              <div class="mt-8 flex justify-between items-center opacity-30">
+                <div class="h-px flex-1 bg-white/20 mr-6"></div>
+                <span
+                  class="text-[9px] font-bold text-white uppercase tracking-[0.5em] whitespace-nowrap"
+                >
+                  Verification: ISO-2026-Structural
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design Narrative -->
+      <section
+        class="bg-white py-32 px-12 border-b border-neutral-100 overflow-hidden"
+      >
+        <div>
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-16 mb-24 items-start"
+          >
+            <div class="lg:col-span-6">
+              <div class="flex items-center gap-4 mb-10">
+                <span
+                  class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.6em]"
+                  >Section // 02</span
+                >
+                <div class="h-px flex-1 bg-neutral-100"></div>
+              </div>
+
+              <h2
+                class="text-6xl md:text-8xl font-black text-[#1B434E] uppercase tracking-tighter leading-[0.85] mb-12"
+              >
+                Design <br />
+                <span class="text-neutral-200">Narrative</span>
+              </h2>
+
+              <p
+                class="text-[#1B434E]/90 text-xl md:text-3xl leading-tight font-bold tracking-tight mb-8"
+              >
+                The Meridian Atrium stands as a testament to the intersection of
+                gravity and ambition.
+              </p>
+
+              <p
+                class="text-[#1B434E]/60 text-lg md:text-xl leading-relaxed font-medium max-w-xl"
+              >
+                Every angle is a deliberate dialogue between the ground plane
+                and the skyline, engineered for a high-density urban
+                environment.
+              </p>
+            </div>
+
+            <div class="lg:col-span-6 relative">
+              <div
+                class="aspect-[16/10] bg-[#0a1a1e] overflow-hidden shadow-2xl group"
+              >
+                <img
+                  alt="Interior Atrium Study"
+                  class="w-full h-full object-cover"
+                  src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+                />
+                <div
+                  class="absolute top-4 left-4 w-4 h-4 border-t border-l border-white/30"
+                ></div>
+                <div
+                  class="absolute bottom-4 right-4 w-4 h-4 border-b border-r border-white/30"
+                ></div>
+              </div>
+
+              <div class="mt-6 flex justify-between items-start">
+                <div class="space-y-1">
+                  <p
+                    class="text-[10px] font-black uppercase tracking-widest text-[#1B434E]"
+                  >
+                    Interior Central Void Study
+                  </p>
+                  <p
+                    class="text-[9px] font-bold uppercase tracking-widest text-[#1B434E]/30 text-xs"
+                  >
+                    Fig. 01 // Computational Analysis
+                  </p>
+                </div>
+                <span
+                  class="text-[10px] font-bold text-[#14b8a6] tracking-tighter"
+                  >PHASE_A.dwg</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center"
+          >
+            <div class="lg:col-span-7">
+              <div
+                class="space-y-10 text-[#1B434E]/80 text-lg md:text-xl leading-relaxed font-medium"
+              >
+                <p class="border-l-2 border-neutral-100 pl-8">
+                  Perhaps the most striking feature is the triple-height atrium,
+                  which utilizes a
+                  <span class="text-[#14b8a6] font-bold italic"
+                    >tension-cable system</span
+                  >
+                  to support its massive glass facade. This creates a
+                  transparent 'lung' for the building.
+                </p>
+
+                <p class="pl-8">
+                  The cantilevered observation decks, protruding 15 meters from
+                  the facade on the 45th and 72nd floors, utilize bespoke
+                  dampers to manage aerodynamic vibrations, providing visitors
+                  with an unparalleled view.
+                </p>
+              </div>
+            </div>
+
+            <div class="lg:col-span-5">
+              <div class="relative p-12 bg-[#0a1a1e] text-white">
+                <div class="mb-8 text-[#14b8a6] text-4xl font-serif">“</div>
+
+                <p
+                  class="text-2xl md:text-3xl font-black tracking-tight leading-tight mb-10"
+                >
+                  The challenge was to create a sense of weightlessness within a
+                  structure weighing thousands of tons.
+                </p>
+
+                <div
+                  class="flex items-center gap-6 pt-10 border-t border-white/10"
+                >
+                  <div
+                    class="w-12 h-12 bg-white/5 rounded-full flex items-center justify-center text-[#14b8a6] font-black text-xs"
+                  >
+                    PS
+                  </div>
+                  <div>
+                    <div
+                      class="text-[10px] font-black uppercase tracking-[0.3em] text-white"
+                    >
+                      Lead Structural Engineer
+                    </div>
+                    <div
+                      class="text-[10px] font-bold uppercase tracking-[0.3em] text-[#14b8a6] mt-1"
+                    >
+                      Technical Oversight
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Gallery of Construction Sketches -->
+      <section class="bg-[#0a1a1e] py-32 px-12 border-t border-white/5">
+        <div>
+          <div
+            class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
+          >
+            <div class="max-w-xl">
+              <div class="flex items-center gap-4 mb-4">
+                <span class="w-8 h-px bg-[#14b8a6]"></span>
+                <span
+                  class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.4em]"
+                  >Drafting the Monolith</span
+                >
+              </div>
+              <h2
+                class="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none"
+              >
+                Technical <span class="text-white/20 italic">Archives</span>
+              </h2>
+              <p class="text-white/50 mt-6 font-medium text-lg leading-relaxed">
+                Original construction sketches, structural diagrams, and
+                computational stress tests for the central core.
+              </p>
+            </div>
+            <div class="flex items-center gap-6">
+              <span
+                class="text-[10px] font-black uppercase tracking-[0.4em] text-white/30 whitespace-nowrap"
+                >Archive Index / 04</span
+              >
+              <div class="h-px w-24 bg-white/10 hidden lg:block"></div>
+            </div>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 border border-white/5"
+          >
+            <div
+              class="aspect-square bg-[#0c1f24] p-10 flex flex-col justify-between group relative overflow-hidden transition-all duration-500 hover:bg-[#112a31]"
+            >
+              <img
+                alt="Load Distribution Phase A"
+                class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-all duration-700 mix-blend-luminosity group-hover:scale-110"
+                src="https://images.unsplash.com/photo-1503387762-592dea58ef21?q=80&w=2000&auto=format&fit=crop"
+              />
+              <div class="relative z-10">
+                <span
+                  class="text-[10px] font-black text-[#14b8a6] uppercase tracking-[0.4em]"
+                  >Section 01</span
+                >
+                <h4
+                  class="text-2xl font-black mt-6 text-white uppercase tracking-tight leading-none"
+                >
+                  Load Distribution <br />
+                  <span class="text-white/40">Phase A</span>
+                </h4>
+              </div>
+              <div class="relative z-10 flex justify-between items-end">
+                <span
+                  class="material-symbols-outlined text-4xl text-white/10 group-hover:text-[#14b8a6] transition-colors"
+                  >architecture</span
+                >
+                <div
+                  class="text-[10px] font-bold text-white/20 uppercase tracking-widest"
+                >
+                  Blueprint / Vector
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="aspect-square bg-[#0c1f24] p-10 flex flex-col justify-between group relative overflow-hidden transition-all duration-500 hover:bg-[#112a31]"
+            >
+              <img
+                alt="Cantilever Joint Detail"
+                class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-all duration-700 mix-blend-luminosity group-hover:scale-110"
+                src="https://images.unsplash.com/photo-1518005020250-675f0f0fd172?q=80&w=2000&auto=format&fit=crop"
+              />
+              <div class="relative z-10">
+                <span
+                  class="text-[10px] font-black text-[#14b8a6] uppercase tracking-[0.4em]"
+                  >Section 02</span
+                >
+                <h4
+                  class="text-2xl font-black mt-6 text-white uppercase tracking-tight leading-none"
+                >
+                  Cantilever <br />
+                  <span class="text-white/40">Joint Detail</span>
+                </h4>
+              </div>
+              <div class="relative z-10 flex justify-between items-end">
+                <span
+                  class="material-symbols-outlined text-4xl text-white/10 group-hover:text-[#14b8a6] transition-colors"
+                  >construction</span
+                >
+                <div
+                  class="text-[10px] font-bold text-white/20 uppercase tracking-widest"
+                >
+                  Model / 1:200
+                </div>
+              </div>
+            </div>
+
+            <div
+              class="aspect-square bg-[#0c1f24] p-10 flex flex-col justify-between group relative overflow-hidden transition-all duration-500 hover:bg-[#112a31]"
+            >
+              <img
+                alt="Basement Tension Study"
+                class="absolute inset-0 w-full h-full object-cover opacity-20 group-hover:opacity-40 transition-all duration-700 mix-blend-luminosity group-hover:scale-110"
+                src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?q=80&w=2000&auto=format&fit=crop"
+              />
+              <div class="relative z-10">
+                <span
+                  class="text-[10px] font-black text-[#14b8a6] uppercase tracking-[0.4em]"
+                  >Section 03</span
+                >
+                <h4
+                  class="text-2xl font-black mt-6 text-white uppercase tracking-tight leading-none"
+                >
+                  Basement <br />
+                  <span class="text-white/40">Tension Study</span>
+                </h4>
+              </div>
+              <div class="relative z-10 flex justify-between items-end">
+                <span
+                  class="material-symbols-outlined text-4xl text-white/10 group-hover:text-[#14b8a6] transition-colors"
+                  >square_foot</span
+                >
+                <div
+                  class="text-[10px] font-bold text-white/20 uppercase tracking-widest"
+                >
+                  Foundation / Sub-A
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="py-24 px-8 border-t border-outline-variant/10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="text-4xl font-bold text-primary mb-8 tracking-tighter">
+            Interested in our structural approach?
+          </h2>
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <button
+              class="bg-primary text-on-primary px-12 py-5 font-headline uppercase tracking-widest text-sm hover:bg-primary-container transition-colors"
+            >
+              Download Technical Brief
+            </button>
+            <button
+              class="border-b-2 border-primary text-primary px-12 py-5 font-headline uppercase tracking-widest text-sm hover:bg-surface-container-low transition-colors"
+            >
+              View More Projects
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#1b434e] text-white w-full">
+      <div
+        class="w-full px-12 py-20 max-w-[1920px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12"
+      >
+        <div>
+          <div
+            class="text-xl font-bold font-['Space_Grotesk'] mb-8 tracking-tighter"
+          >
+            Prodisenyo Builders
+          </div>
+          <p class="text-sm font-light text-slate-300 max-w-xs leading-relaxed">
+            Leading the industry in structural precision and modern
+            architectural construction. Precision in every joint, integrity in
+            every structure.
+          </p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <h5 class="font-bold text-[10px] tracking-[0.4em] mb-6 uppercase">
+            Legal
+          </h5>
+          <a
+            class="text-sm font-light text-slate-300 hover:text-white transition-colors duration-300"
+            href="#"
+            >Privacy Policy</a
+          >
+          <a
+            class="text-sm font-light text-slate-300 hover:text-white transition-colors duration-300"
+            href="#"
+            >Terms of Service</a
+          >
+          <a
+            class="text-sm font-light text-slate-300 hover:text-white transition-colors duration-300"
+            href="#"
+            >Cookie Policy</a
+          >
+        </div>
+        <div class="flex flex-col gap-4">
+          <h5 class="font-bold text-[10px] tracking-[0.4em] mb-6 uppercase">
+            Social
+          </h5>
+          <a
+            class="text-sm font-light text-slate-300 hover:text-white transition-colors duration-300"
+            href="#"
+            >LinkedIn</a
+          >
+          <a
+            class="text-sm font-light text-slate-300 hover:text-white transition-colors duration-300"
+            href="#"
+            >Instagram</a
+          >
+          <a
+            class="text-sm font-light text-slate-300 hover:text-white transition-colors duration-300"
+            href="#"
+            >ArchDaily</a
+          >
+        </div>
+        <div class="lg:border-l border-white/10 lg:pl-12">
+          <h5 class="font-bold text-[10px] tracking-[0.4em] mb-6 uppercase">
+            Headquarters
+          </h5>
+          <p class="text-sm font-light text-slate-300 mb-2">
+            1248 Structure Ave, Design District
+          </p>
+          <p class="text-sm font-light text-slate-300 mb-8">
+            Manila, Philippines
+          </p>
+          <a
+            class="text-sm font-medium text-white hover:text-secondary transition-colors"
+            href="mailto:contact@prodisenyo.com"
+            >contact@prodisenyo.com</a
+          >
+        </div>
+      </div>
+      <div
+        class="w-full px-12 py-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 max-w-[1920px] mx-auto"
+      >
+        <span class="text-xs font-light text-slate-400"
+          >© 2024 Prodisenyo Builders. Precision in Structure. All Rights
+          Reserved.</span
+        >
+        <div class="flex gap-8">
+          <span class="material-symbols-outlined text-xl">architecture</span>
+          <span class="material-symbols-outlined text-xl">engineering</span>
+          <span class="material-symbols-outlined text-xl">apartment</span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
