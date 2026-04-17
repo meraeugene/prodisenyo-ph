@@ -175,60 +175,86 @@
         </button>
       </div>
     </nav>
+
     <!-- Hero Section -->
     <section
-      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+      class="bg-[#0a1a1e] relative min-h-screen flex items-center justify-center overflow-hidden border-b border-white/5"
     >
       <div class="absolute inset-0 z-0">
         <img
           alt="Modern skyscraper architectural detail"
-          class="w-full h-full object-cover opacity-60 grayscale"
+          class="w-full h-full object-cover opacity-[0.2] grayscale contrast-125 brightness-50"
           src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
         />
         <div
-          class="absolute inset-0 bg-gradient-to-b from-[#0a1a1e]/80 via-[#0a1a1e]/90 to-[#0a1a1e]"
+          class="absolute inset-0 opacity-[0.03]"
+          style="
+            background-image:
+              linear-gradient(#14b8a6 1px, transparent 1px),
+              linear-gradient(90deg, #14b8a6 1px, transparent 1px);
+            background-size: 60px 60px;
+          "
         ></div>
       </div>
 
-      <div class="relative z-20 w-full px-12 max-w-5xl mx-auto text-center">
-        <div
-          class="mb-4 text-white/60 font-mono text-sm tracking-[0.6em] uppercase animate-pulse"
-        >
-          Structural Engineering &amp; Architectural Design
+      <div
+        class="relative z-20 w-full px-6 md:px-12 max-w-7xl mx-auto text-center"
+      >
+        <div class="mb-8 flex items-center justify-center gap-4">
+          <div class="h-px w-8 bg-[#14b8a6]"></div>
+          <span
+            class="text-[#14b8a6] font-black text-[10px] tracking-[0.6em] uppercase animate-pulse"
+          >
+            Structural Engineering // Design Studio
+          </span>
+          <div class="h-px w-8 bg-[#14b8a6]"></div>
         </div>
+
         <h1
-          class="text-6xl md:text-9xl font-bold leading-none text-white tracking-tighter mb-8 uppercase"
+          class="text-[15vw] md:text-[12rem] font-black leading-[0.8] text-white tracking-[-0.06em] uppercase mb-12"
         >
-          Prodisenyo
+          Prodi<span
+            class="text-transparent"
+            style="-webkit-text-stroke: 1.5px rgba(20, 184, 166, 0.3)"
+            >senyo</span
+          >
         </h1>
+
         <p
-          class="text-lg md:text-xl text-white/80 font-light leading-relaxed mb-12 max-w-3xl mx-auto"
+          class="text-lg md:text-2xl text-white/70 font-medium leading-tight mb-16 max-w-3xl mx-auto tracking-tight"
         >
           Redefining the intersection of radical structural engineering and
-          high-fidelity architectural design through technical mastery.
+          <span class="text-white">high-fidelity architectural design</span>
+          through technical mastery.
         </p>
-        <div class="flex flex-wrap gap-6 justify-center">
+
+        <div
+          class="flex flex-col md:flex-row gap-6 justify-center items-center"
+        >
           <button
-            class="bg-white text-primary px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-surface-variant transition-all"
+            class="bg-[#14b8a6] text-[#0a1a1e] px-14 py-6 font-black uppercase tracking-[0.3em] text-[10px] hover:bg-white hover:scale-[1.02] transition-all duration-500 shadow-xl shadow-black/10"
           >
             View Portfolio
           </button>
           <button
-            class="border border-white/40 text-white px-12 py-5 font-bold uppercase tracking-widest text-xs hover:bg-white/10 transition-all backdrop-blur-sm"
+            class="border-2 border-white/20 text-white px-14 py-6 font-black uppercase tracking-[0.3em] text-[10px] hover:border-[#14b8a6] hover:bg-white/5 hover:text-[#14b8a6] transition-all duration-500"
           >
             Our Method
           </button>
         </div>
       </div>
+
       <div
-        class="absolute bottom-12 left-1/2 -translate-x-1/2 text-center z-20"
+        class="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 hidden md:block"
       >
         <span
-          class="text-white/40 font-mono text-[10px] tracking-[0.8em] uppercase"
-          >v.2024.structural.integrity</span
+          class="text-white/20 font-black text-[9px] tracking-[0.8em] uppercase vertical-rl"
         >
+          v.2026.structural.integrity
+        </span>
       </div>
     </section>
+
     <!-- Unified Mission & Vision Section -->
     <section class="bg-white py-24 px-12 border-t border-b border-neutral-100">
       <div class="max-w-[1500px] mx-auto">
@@ -320,127 +346,183 @@
     </section>
 
     <!-- Featured Projects: Bento Grid Layout -->
-    <section class="bg-surface py-24 px-12 border-t border-outline-variant/20">
-      <div class="max-w-[1500px] mx-auto">
+    <section
+      class="bg-surface py-32 px-6 md:px-20 relative overflow-hidden font-body"
+    >
+      <div class="max-w-[1500px] mx-auto z-10 relative space-y-36">
         <div
-          class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16"
+          class="grid grid-cols-12 gap-8 bg-[#0a1a1e] p-12 md:p-20 border border-white/5"
         >
-          <div>
-            <div
-              class="text-primary font-bold tracking-[0.2em] mb-4 text-[10px] uppercase"
-            >
-              02 / Portfolio
-            </div>
+          <div class="col-span-12 md:col-span-7">
             <h2
-              class="text-5xl md:text-6xl font-bold text-primary uppercase tracking-tighter"
+              class="text-6xl md:text-8xl font-bold text-secondary-fixed uppercase tracking-tighter leading-[0.85] font-headline"
             >
-              Featured Structures
+              Featured<br />
+              <span
+                class="text-transparent"
+                style="-webkit-text-stroke: 1.5px #8df5e4"
+                >Structures.</span
+              >
             </h2>
           </div>
-          <a
-            class="mt-8 md:mt-0 text-primary font-bold uppercase tracking-widest text-xs flex items-center gap-3 group hover:gap-5 transition-all"
-            href="#"
+
+          <div
+            class="col-span-12 flex md:justify-end md:items-end mt-10 md:mt-0"
           >
-            View All Projects
-            <span class="material-symbols-outlined text-sm">arrow_forward</span>
+            <a
+              href="#"
+              class="group flex items-center gap-6 pb-2 border-b-2 border-secondary-fixed hover:border-primary-fixed transition-all"
+            >
+              <span
+                class="text-secondary-fixed font-bold uppercase tracking-[0.3em] text-[10px] group-hover:text-primary-fixed font-label"
+                >View Full Archive</span
+              >
+              <span
+                class="material-symbols-outlined text-secondary-fixed group-hover:text-primary-fixed group-hover:translate-x-2 transition-transform"
+                >north_east</span
+              >
+            </a>
+          </div>
+        </div>
+
+        <div class="group grid grid-cols-12 gap-0 items-start">
+          <div
+            class="col-span-12 md:col-span-1 text-left md:text-right md:pr-12 pt-4"
+          >
+            <span
+              class="text-7xl font-bold text-primary transition-colors leading-none block mb-2 font-headline"
+              >01</span
+            >
+          </div>
+
+          <div class="col-span-12 md:col-span-3 pt-4 pr-12">
+            <span
+              class="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-6 block font-label"
+              >Residential // Luxury</span
+            >
+            <h3
+              class="text-4xl font-bold uppercase tracking-tight mb-6 text-primary transition-colors font-headline leading-none"
+            >
+              The Obsidian Residence
+            </h3>
+            <p
+              class="text-on-surface-variant text-base font-light leading-relaxed max-w-xs mb-8"
+            >
+              Custom structural glass fabrication and reinforced cantilever
+              masonry designed for seamless integration with the horizon.
+            </p>
+
+            <a
+              href="/pages/projects.html"
+              class="bg-primary text-on-primary px-10 py-5 font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-secondary transition-all shadow-lg font-label"
+            >
+              View Project
+            </a>
+          </div>
+
+          <a
+            href="/pages/projects.html"
+            class="col-span-12 md:col-span-8 relative overflow-hidden h-[75vh] bg-surface-container-high"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000"
+              alt="Modern luxury residence with glass walls"
+              class="w-full h-full object-cover"
+            />
           </a>
         </div>
-        <div class="grid grid-cols-12 gap-8">
-          <!-- Large Project Block -->
-          <div class="col-span-12 lg:col-span-7 group">
-            <div
-              class="relative overflow-hidden h-[650px] bg-surface-container-high"
+
+        <div class="group grid grid-cols-12 gap-0 items-end">
+          <a
+            href="/pages/projects.html"
+            class="col-span-12 md:col-span-8 order-2 md:order-1 relative overflow-hidden h-[75vh] bg-surface-container-high"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
+              alt="High-rise skyscraper glass facade"
+              class="w-full h-full object-cover"
+            />
+          </a>
+
+          <div class="col-span-12 md:col-span-3 order-3 md:order-2 pl-12 pb-4">
+            <span
+              class="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-6 block font-label"
+              >Commercial // High-Rise</span
             >
-              <img
-                alt="Luxury glass villa"
-                class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBm2KvtwGiWoYUS9g1hN1Dr93rxBksG71pt3HrEnQFIEOqznPYIt5meFyPvwPz0EWrrDMG8oCmm7GS-O3tbzebcA8Reh8D74LUJKSWCwSTYmjWJGkNg35h9dyNIcVYKqHU66GGABaorMYa7DREgKyosvaAlqusNpm5z1pTtNnhrJ8X9MLN9yK39sdaujtTgHnBE22kofDT3pW_0y45-_kmdhHuSOHmB_g7gX57ILqV9DvFrMU2nglzPwedNMDCfK-S0P2CQe17pE1CE"
-              />
-              <div
-                class="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]"
-              >
-                <button
-                  class="bg-white text-primary px-10 py-5 font-bold uppercase tracking-widest text-xs translate-y-4 group-hover:translate-y-0 transition-transform"
-                >
-                  Explore Details
-                </button>
-              </div>
-            </div>
-            <div class="py-10">
-              <span
-                class="inline-block bg-primary text-on-primary text-[10px] px-4 py-1.5 mb-6 font-bold tracking-[0.2em]"
-                >RESIDENTIAL</span
-              >
-              <h3 class="text-4xl font-bold text-primary mb-4">
-                The Obsidian Residence
-              </h3>
-              <p class="text-on-surface-variant font-light text-lg max-w-2xl">
-                Custom structural glass fabrication and reinforced cantilever
-                masonry designed for seamless integration with the horizon.
-              </p>
-            </div>
+            <h3
+              class="text-4xl font-bold uppercase tracking-tight mb-6 text-primary transition-colors font-headline leading-none"
+            >
+              Vertex Plaza
+            </h3>
+            <p
+              class="text-on-surface-variant text-base font-light leading-relaxed max-w-xs mb-12"
+            >
+              Precision steel framing and structural glazing for high-rise
+              corporate environments and urban landmarks.
+            </p>
+            <a
+              href="/pages/projects.html"
+              class="bg-primary text-on-primary px-10 py-5 font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-secondary transition-all shadow-lg font-label"
+            >
+              View Project
+            </a>
           </div>
-          <!-- Column of smaller projects -->
-          <div class="col-span-12 lg:col-span-5 flex flex-col gap-8">
-            <!-- Project 2 -->
-            <div
-              class="bg-surface-container-low flex flex-col md:flex-row h-full group border border-transparent hover:border-outline-variant/30 transition-colors"
+
+          <div
+            class="col-span-12 md:col-span-1 order-1 md:order-3 text-left pl-12"
+          >
+            <span
+              class="text-7xl font-bold text-primary transition-colors leading-none block mb-2 font-headline"
+              >02</span
             >
-              <div class="md:w-1/2 overflow-hidden h-72 md:h-auto">
-                <img
-                  alt="Office skyscraper"
-                  class="w-full h-full object-cover transition-all duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOX4JLws6V0I5NDwoVGmiSpdLQnLtek87D_lC3FFngedUvSL7ru2PSogjIBpTU2WuHy1Ey2ME2mEx9Nva5uI9w-NQytzqRyG1kdatTAOCfoSvnTyKQ1R8YOzGaY453Zj35FUUDK95dg76ls83P15nZ-yzpj5wx28nYeQv0yFUYcLjLzS7UW77XRQMVYMZbWbvBdPeK0Uy3pufsZ467sdGbYWpw3YcKDKkM9g7yKeWusF-SlHVWqwJ8qmBB83g2291fmzMpk8ajULHw"
-                />
-              </div>
-              <div class="md:w-1/2 p-10 flex flex-col justify-center">
-                <span
-                  class="inline-block text-primary text-[10px] mb-4 font-bold tracking-[0.2em]"
-                  >COMMERCIAL</span
-                >
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  Vertex Plaza
-                </h3>
-                <p
-                  class="text-sm text-on-surface-variant font-light leading-relaxed"
-                >
-                  Precision steel framing and structural glazing for high-rise
-                  corporate environments.
-                </p>
-              </div>
-            </div>
-            <!-- Project 3 -->
-            <div
-              class="bg-surface-container-low flex flex-col md:flex-row h-full group border border-transparent hover:border-outline-variant/30 transition-colors"
-            >
-              <div
-                class="md:w-1/2 p-10 flex flex-col justify-center order-2 md:order-1"
-              >
-                <span
-                  class="inline-block text-primary text-[10px] mb-4 font-bold tracking-[0.2em]"
-                  >STRUCTURAL</span
-                >
-                <h3 class="text-2xl font-bold text-primary mb-4">
-                  The Grid Pavilion
-                </h3>
-                <p
-                  class="text-sm text-on-surface-variant font-light leading-relaxed"
-                >
-                  Exposed architectural concrete and mathematical symmetry in
-                  monumental public spaces.
-                </p>
-              </div>
-              <div
-                class="md:w-1/2 overflow-hidden h-72 md:h-auto order-1 md:order-2"
-              >
-                <img
-                  alt="Modern pavilion"
-                  class="w-full h-full object-cover transition-all duration-700"
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHHh1_qZ6eoKr6-KGCc-2O98mg-TeE-ypSvCzRehLv9ii528wdzCbMGgEiVYwQShUPre3dCIi1s-1v6MVjNQN_NR1S9II7oxMI-L5NocMsbncC2KAZdDBQc9beOHQc9cFIUPy1_BmkGH8e7c1msk7qj-FBLz0v2xoDxLM7PC9TXW5YvJFWxcomR8LAScPsnWv8MTXb1ptFunHZ6RBZeMXzSnt9lK_6BNdlugHdF4YObsrdyHrfam4-mDvvC14nw-bmunyaaX2DVyKx"
-                />
-              </div>
-            </div>
           </div>
+        </div>
+
+        <div class="group grid grid-cols-12 gap-0 items-start">
+          <div
+            class="col-span-12 md:col-span-1 text-left md:text-right md:pr-12 pt-4"
+          >
+            <span
+              class="text-7xl font-bold text-primary transition-colors leading-none block mb-2 font-headline"
+              >03</span
+            >
+          </div>
+
+          <div class="col-span-12 md:col-span-3 pt-4 pr-12">
+            <span
+              class="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-6 block font-label"
+              >Cultural // Landmark</span
+            >
+            <h3
+              class="text-4xl font-bold uppercase tracking-tight mb-6 text-primary transition-colors font-headline leading-none"
+            >
+              Nova Museum Complex
+            </h3>
+            <p
+              class="text-on-surface-variant text-base font-light leading-relaxed max-w-xs mb-8"
+            >
+              An architectural marvel featuring sweeping concrete curves and
+              integrated sustainable systems for a modern cultural hub.
+            </p>
+
+            <a
+              href="/pages/projects.html"
+              class="bg-primary text-on-primary px-10 py-5 font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-secondary transition-all shadow-lg font-label"
+            >
+              View Project
+            </a>
+          </div>
+
+          <a
+            href="/pages/projects.html"
+            class="col-span-12 md:col-span-8 relative overflow-hidden h-[75vh] bg-surface-container-high"
+          >
+            <img
+              src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&q=80&w=2000"
+              alt="Modern museum with concrete curves"
+              class="w-full h-full object-cover"
+            />
+          </a>
         </div>
       </div>
     </section>
