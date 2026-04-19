@@ -14,6 +14,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
@@ -95,6 +99,9 @@
           "GRAD" 0,
           "opsz" 24;
       }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: "Inter", sans-serif;
       }
@@ -104,19 +111,81 @@
       .font-headline {
         font-family: "Space Grotesk", sans-serif;
       }
+      #site-nav {
+        transition:
+          background-color 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      #site-nav .nav-brand,
+      #site-nav a,
+      #site-nav .nav-cta {
+        transition:
+          color 0.3s ease,
+          border-color 0.3s ease,
+          background-color 0.3s ease;
+      }
+      #site-nav.nav-on-dark {
+        background-color: rgba(247, 250, 252, 0.08);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+      #site-nav.nav-on-dark .nav-brand {
+        color: #ffffff !important;
+      }
+      #site-nav.nav-on-dark a {
+        color: rgba(255, 255, 255, 0.72) !important;
+      }
+      #site-nav.nav-on-dark a:hover {
+        color: #ffffff !important;
+      }
+      #site-nav.nav-on-dark a.border-b-2 {
+        color: #ffffff !important;
+        border-color: #ffffff !important;
+      }
+      #site-nav.nav-on-light {
+        background-color: rgba(247, 250, 252, 0.94);
+        border-color: rgba(24, 28, 30, 0.12);
+        box-shadow: 0 8px 24px rgba(15, 47, 53, 0.08);
+      }
+      #site-nav.nav-on-light .nav-brand {
+        color: #0f2f35 !important;
+      }
+      #site-nav.nav-on-light a {
+        color: rgba(24, 28, 30, 0.7) !important;
+      }
+      #site-nav.nav-on-light a:hover {
+        color: #0f2f35 !important;
+      }
+      #site-nav.nav-on-light .nav-cta,
+      #site-nav.nav-on-light .nav-cta:hover {
+        color: #ffffff !important;
+        background-color: #124a4f !important;
+      }
+      #site-nav.nav-on-light a.border-b-2 {
+        color: #0f2f35 !important;
+        border-color: #0f2f35 !important;
+      }
+      #site-nav .nav-cta {
+        background-color: #205e61 !important;
+        color: #ffffff !important;
+      }
     </style>
   </head>
   <body
-    class="bg-surface text-on-surface selection:bg-secondary selection:text-white"
+    class="bg-surface text-on-surface selection:bg-secondary selection:text-white overflow-x-hidden"
   >
     <!-- TopAppBar -->
     <nav
-      class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/10"
+      id="site-nav"
+      data-scroll-switch="90"
+      class="fixed top-0 w-full z-50 backdrop-blur-md border-b nav-on-dark"
     >
       <div
-        class="flex justify-between items-center w-full py-3 max-w-[1500px] mx-auto"
+        class="flex justify-between items-center w-full py-3 px-4 sm:px-6 max-w-[1500px] mx-auto"
       >
-        <div class="text-xl font-bold tracking-tighter text-white">
+        <div
+          class="nav-brand text-base sm:text-xl font-bold tracking-tighter text-white"
+        >
           Prodisenyo Builders
         </div>
         <div class="hidden md:flex gap-10 items-center">
@@ -146,17 +215,64 @@
             >Contact</a
           >
         </div>
-        <button
-          class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
+        <a
+          href="/pages/contact.html"
+          class="nav-cta hidden sm:inline-block bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
         >
           Get Quote
+        </a>
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          class="md:hidden text-white/90 hover:text-white transition-colors"
+        >
+          <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-white/10 px-4 py-4 bg-black/30 backdrop-blur-md"
+      >
+        <div class="flex flex-col gap-3">
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/"
+            >Home</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/portfolio.html"
+            >Projects</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white"
+            href="/pages/about.html"
+            >About</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/contact.html"
+            >Contact</a
+          >
+          <a
+            href="/pages/contact.html"
+            class="nav-cta inline-block mt-2 bg-primary text-on-primary px-6 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold text-center"
+            >Get Quote</a
+          >
+        </div>
       </div>
     </nav>
     <main class="">
       <!-- Hero Section: Asymmetric Title -->
       <section
-        class="bg-[#0a1a1e] px-12 py-32 border-t border-white/5 relative overflow-hidden"
+        class="bg-[#0a1a1e] px-4 sm:px-6 md:px-12 py-32 border-t border-white/5 relative overflow-hidden"
       >
         <div
           class="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16 items-end"
@@ -172,7 +288,7 @@
             </div>
 
             <h1
-              class="text-7xl md:text-[9rem] font-black text-white leading-[0.85] tracking-[-0.05em] uppercase"
+              class="text-4xl sm:text-6xl md:text-[9rem] font-black text-white leading-[0.85] tracking-[-0.05em] uppercase"
             >
               Our Legacy of <br />
               <span
@@ -212,7 +328,7 @@
       </section>
       <!-- Mission Statement: Full Width Monolith -->
       <section
-        class="bg-[#0a1a1e] px-12 py-32 border-t border-white/5 relative overflow-hidden"
+        class="bg-[#0a1a1e] px-4 sm:px-6 md:px-12 py-32 border-t border-white/5 relative overflow-hidden"
       >
         <div
           class="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-16"
@@ -227,7 +343,7 @@
                 <div class="h-px w-12 bg-white/10"></div>
               </div>
               <h2
-                class="text-6xl font-black text-white uppercase tracking-tighter leading-none"
+                class="text-4xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none"
               >
                 Proven <br />
                 <span
@@ -252,14 +368,15 @@
             class="lg:col-span-8 grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5 border border-white/5"
           >
             <div
-              class="bg-[#0c1f24] p-12 group hover:bg-[#14b8a6]/5 transition-all duration-500"
+              class="bg-[#0c1f24] p-8 md:p-12 group hover:bg-[#14b8a6]/5 transition-all duration-500"
             >
               <span
                 class="text-[10px] font-black text-[#14b8a6] uppercase tracking-[0.5em] block mb-12"
                 >Projects Completed</span
               >
               <div class="flex items-baseline gap-2">
-                <span class="text-7xl font-black text-white tracking-tighter"
+                <span
+                  class="text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tighter"
                   >450</span
                 >
                 <span class="text-[#14b8a6] font-black text-2xl">+</span>
@@ -274,14 +391,15 @@
             </div>
 
             <div
-              class="bg-[#0c1f24] p-12 group hover:bg-[#14b8a6]/5 transition-all duration-500"
+              class="bg-[#0c1f24] p-8 md:p-12 group hover:bg-[#14b8a6]/5 transition-all duration-500"
             >
               <span
                 class="text-[10px] font-black text-[#14b8a6] uppercase tracking-[0.5em] block mb-12"
                 >Awards Won</span
               >
               <div class="flex items-baseline gap-2">
-                <span class="text-7xl font-black text-white tracking-tighter"
+                <span
+                  class="text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tighter"
                   >12</span
                 >
                 <span class="text-[#14b8a6] font-black text-2xl">🏆</span>
@@ -296,14 +414,15 @@
             </div>
 
             <div
-              class="bg-[#0c1f24] p-12 group hover:bg-[#14b8a6]/5 transition-all duration-500"
+              class="bg-[#0c1f24] p-8 md:p-12 group hover:bg-[#14b8a6]/5 transition-all duration-500"
             >
               <span
                 class="text-[10px] font-black text-[#14b8a6] uppercase tracking-[0.5em] block mb-12"
                 >Client Retention</span
               >
               <div class="flex items-baseline gap-2">
-                <span class="text-7xl font-black text-white tracking-tighter"
+                <span
+                  class="text-5xl sm:text-6xl md:text-7xl font-black text-white tracking-tighter"
                   >98</span
                 >
                 <span class="text-[#14b8a6] font-black text-2xl">%</span>
@@ -320,7 +439,7 @@
         </div>
 
         <div
-          class="absolute bottom-0 right-0 p-10 opacity-[0.03] select-none pointer-events-none"
+          class="absolute bottom-0 right-0 p-10 opacity-[0.03] select-none pointer-events-none hidden md:block"
         >
           <div
             class="text-[12rem] font-black text-white tracking-tighter leading-none"
@@ -332,19 +451,19 @@
 
       <!-- Timeline: Asymmetric Grid -->
       <section
-        class="bg-[#0a1a1e] py-32 px-6 md:px-20 border-t border-primary/20 relative font-body"
+        class="bg-[#0a1a1e] py-32 px-4 sm:px-6 md:px-20 border-t border-primary/20 relative font-body"
       >
         <div class="max-w-[1500px] mx-auto mb-24">
           <div class="flex items-center gap-4 mb-8">
             <span
-              class="text-secondary-fixed font-bold text-[10px] uppercase tracking-[0.5em] font-label"
+              class="text-secondary-fixed font-bold text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.5em] font-label"
             >
               Evolution_Sequence
             </span>
             <div class="h-px w-16 bg-secondary-fixed/20"></div>
           </div>
           <h2
-            class="text-6xl md:text-8xl font-bold tracking-tighter text-secondary-fixed uppercase leading-[0.85] font-headline"
+            class="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-secondary-fixed uppercase leading-[0.85] font-headline"
           >
             Two Decades <br />
             <span
@@ -387,7 +506,7 @@
                 </p>
               </div>
               <span
-                class="absolute right-4 top-1/2 -translate-y-1/2 text-9xl font-bold text-secondary-fixed/[0.03] select-none pointer-events-none font-headline"
+                class="absolute right-4 top-1/2 -translate-y-1/2 text-9xl font-bold text-secondary-fixed/[0.03] select-none pointer-events-none font-headline hidden md:block"
               >
                 01
               </span>
@@ -423,7 +542,7 @@
                 </p>
               </div>
               <span
-                class="absolute right-4 top-1/2 -translate-y-1/2 text-9xl font-bold text-secondary-fixed/[0.03] select-none pointer-events-none font-headline"
+                class="absolute right-4 top-1/2 -translate-y-1/2 text-9xl font-bold text-secondary-fixed/[0.03] select-none pointer-events-none font-headline hidden md:block"
               >
                 02
               </span>
@@ -459,7 +578,7 @@
                 </p>
               </div>
               <span
-                class="absolute right-4 top-1/2 -translate-y-1/2 text-9xl font-bold text-secondary-fixed/[0.03] select-none pointer-events-none font-headline"
+                class="absolute right-4 top-1/2 -translate-y-1/2 text-9xl font-bold text-secondary-fixed/[0.03] select-none pointer-events-none font-headline hidden md:block"
               >
                 03
               </span>
@@ -469,7 +588,7 @@
       </section>
 
       <!-- Leadership: Structural Cards -->
-      <section class="py-32 max-w-[1500px] mx-auto">
+      <section class="py-32 px-4 sm:px-6 md:px-0 max-w-[1500px] mx-auto">
         <div
           class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
         >
@@ -489,13 +608,13 @@
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-1">
           <!-- Principal Architect -->
-          <div class="bg-surface p-12 pl-0 pt-0">
+          <div class="bg-surface p-8 md:p-12 pl-0 pt-0">
             <div
               class="aspect-[4/5] bg-surface-container-highest mb-8 overflow-hidden"
             >
               <img
                 alt="Principal Architect"
-                class="w-full h-full object-cover grayscale contrast-125"
+                class="w-full h-full object-cover contrast-125"
                 data-alt="Black and white professional portrait of a senior architect with glasses, looking thoughtful, sharp studio lighting, architectural office background"
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5zrignZh3vIIEcolmtwSIjPyXRnM_REc3IMQ3DbhUk1J-8CsWqTLK79wKUkt0fDw9a1XJcIj1j80L55Gx-bODhJCU2HYQFT3po816oKitbyxoLOBN7r0_cJD0de_zk3YmyXiLIEnN_NDPqdHIjmCihijBa2nvGYZcAdfI82PXd0-aiVfI2SCbYb44-OiDh2pbJYJxnk_fqlykoJmNNlQp4s0mgDRa0nz3bc4pRBEs_Jhioa8k3LB5HI5XC4aGLZ0qbcF73ZVggimS"
               />
@@ -511,21 +630,17 @@
               commercial design, Julian leads the creative vision, ensuring
               every project challenges the standard tropes of modern building.
             </p>
-            <div class="flex gap-4">
-              <span class="material-symbols-outlined text-secondary">link</span>
-              <span class="material-symbols-outlined text-secondary">mail</span>
-            </div>
           </div>
           <!-- Lead Structural Engineer -->
-          <div class="bg-surface p-12 pr-0 pt-0">
+          <div class="bg-surface p-8 md:p-12 pr-0 pt-0">
             <div
               class="aspect-[4/5] bg-surface-container-highest mb-8 overflow-hidden"
             >
               <img
-                alt="Lead Structural Engineer"
-                class="w-full h-full object-cover grayscale contrast-125"
-                data-alt="Professional portrait of a woman engineer in a dark blazer, confident expression, minimalist white background, soft editorial lighting"
-                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8GWjK4WUvVsdqQ78GTsoAr3tIEuHjdNHaq3H4w99wCtD0gkB0ay_zwA0NsEX-UvoIcT3ALhtOof6LWdwUH7GLfyk0ojIecl8GlORRnYvgVoDZ47tjkxW895yrZAnlLzLh-yA2pBfcjQuE6cJmY0qTUy0CMLlapES-z3vhbIses-7l2THxCCCnoy4hDfk2EYLSIJ-fkOX_cnRkFw_g4qb3ygbfXnuqHGPS3Zj2EiY8IPI-qXE7-VjYApR9pv5jY_p33ZnfxzrvU1jy"
+                alt="Lead Structural Engineer portrait of a suited woman"
+                class="w-full h-full object-cover object-center"
+                data-alt="Professional portrait of a suited woman engineer with a confident expression, clean studio lighting, and a modern corporate look"
+                src="https://images.unsplash.com/photo-1607746882042-944635dfe10e?auto=format&fit=crop&q=80&w=1200"
               />
             </div>
             <div
@@ -541,16 +656,12 @@
               oversees the technical backbone of Prodisenyo. Her work ensures
               that aesthetic beauty never compromises structural permanence.
             </p>
-            <div class="flex gap-4">
-              <span class="material-symbols-outlined text-secondary">link</span>
-              <span class="material-symbols-outlined text-secondary">mail</span>
-            </div>
           </div>
         </div>
       </section>
       <!-- CTA Section -->
       <section
-        class="bg-[#0a1a1e] py-24 px-12 relative overflow-hidden border-t border-white/5"
+        class="bg-[#0a1a1e] py-24 px-4 sm:px-6 md:px-12 relative overflow-hidden border-t border-white/5"
       >
         <div class="max-w-[1500px] mx-auto relative z-10">
           <div
@@ -559,14 +670,14 @@
             <div class="text-left max-w-2xl">
               <div class="flex items-center gap-3 mb-6">
                 <span
-                  class="text-[#14b8a6] font-black text-[9px] uppercase tracking-[0.6em]"
+                  class="text-[#14b8a6] font-black text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.6em]"
                   >Inquiry_Portal // 2026</span
                 >
                 <div class="h-px w-10 bg-[#14b8a6]/30"></div>
               </div>
 
               <h2
-                class="text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9] uppercase"
+                class="text-4xl sm:text-5xl md:text-7xl font-black text-white tracking-tighter leading-[0.9] uppercase"
               >
                 Build Your <br />
                 <span
@@ -578,15 +689,16 @@
             </div>
 
             <div class="flex flex-col items-center lg:items-end gap-6">
-              <button
-                class="group relative bg-[#14b8a6] text-[#0a1a1e] px-12 py-6 font-black uppercase tracking-[0.3em] text-[10px] transition-all duration-500 hover:bg-white"
+              <a
+                href="/pages/contact.html"
+                class="group relative bg-[#14b8a6] text-[#0a1a1e] w-full sm:w-auto text-center px-8 sm:px-12 py-6 font-black uppercase tracking-[0.3em] text-[10px] transition-all duration-500 hover:bg-white"
               >
                 Collaborate with us
                 <span
                   class="ml-4 transition-transform group-hover:translate-x-2 inline-block"
                   >→</span
                 >
-              </button>
+              </a>
             </div>
           </div>
         </div>
@@ -664,6 +776,13 @@
           <nav class="flex flex-col gap-4">
             <a
               class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="https://www.facebook.com/search/top?q=prodisenyo%20builders"
+              target="_blank"
+              rel="noreferrer"
+              >Facebook</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
               href="#"
               >LinkedIn</a
             >
@@ -671,11 +790,6 @@
               class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
               href="#"
               >Instagram</a
-            >
-            <a
-              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
-              href="#"
-              >ArchDaily</a
             >
           </nav>
         </div>
@@ -721,22 +835,60 @@
             </span>
           </div>
 
-          <div class="flex gap-10 opacity-20 group">
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >architecture</span
+          <div class="flex gap-8 opacity-20 group">
+            <a
+              href="https://www.facebook.com/search/top?q=prodisenyo%20builders"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              class="hover:text-[#14b8a6] transition-colors cursor-pointer"
             >
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >engineering</span
-            >
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >apartment</span
-            >
+              <i class="fa-brands fa-facebook-f text-2xl"></i>
+            </a>
+            <i
+              class="fa-brands fa-linkedin-in text-2xl hover:text-[#14b8a6] transition-colors cursor-pointer"
+            ></i>
+            <i
+              class="fa-brands fa-instagram text-2xl hover:text-[#14b8a6] transition-colors cursor-pointer"
+            ></i>
           </div>
         </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        const nav = document.getElementById("site-nav");
+        if (!nav) return;
+        const menuToggle = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener("click", () => {
+            const expanded =
+              menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!expanded));
+            mobileMenu.classList.toggle("hidden", expanded);
+          });
+
+          window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+              mobileMenu.classList.add("hidden");
+              menuToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        const switchAt = Number(nav.getAttribute("data-scroll-switch") || 80);
+
+        const syncNavContrast = () => {
+          const lightMode = window.scrollY > switchAt;
+          nav.classList.toggle("nav-on-light", lightMode);
+          nav.classList.toggle("nav-on-dark", !lightMode);
+        };
+
+        syncNavContrast();
+        window.addEventListener("scroll", syncNavContrast, { passive: true });
+      })();
+    </script>
   </body>
 </html>

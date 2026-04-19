@@ -15,6 +15,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
@@ -95,6 +99,9 @@
           "GRAD" 0,
           "opsz" 24;
       }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: "Inter", sans-serif;
       }
@@ -108,17 +115,81 @@
         writing-mode: vertical-rl;
         text-orientation: mixed;
       }
+      #site-nav {
+        transition:
+          background-color 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      #site-nav .nav-brand,
+      #site-nav a,
+      #site-nav .nav-cta {
+        transition:
+          color 0.3s ease,
+          border-color 0.3s ease,
+          background-color 0.3s ease;
+      }
+      #site-nav.nav-on-dark {
+        background-color: rgba(247, 250, 252, 0.08);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+      #site-nav.nav-on-dark .nav-brand {
+        color: #ffffff !important;
+      }
+      #site-nav.nav-on-dark a {
+        color: rgba(255, 255, 255, 0.72) !important;
+      }
+      #site-nav.nav-on-dark a:hover {
+        color: #ffffff !important;
+      }
+      #site-nav.nav-on-dark a.border-b-2 {
+        color: #ffffff !important;
+        border-color: #ffffff !important;
+      }
+      #site-nav.nav-on-light {
+        background-color: rgba(247, 250, 252, 0.94);
+        border-color: rgba(24, 28, 30, 0.12);
+        box-shadow: 0 8px 24px rgba(15, 47, 53, 0.08);
+      }
+      #site-nav.nav-on-light .nav-brand {
+        color: #0f2f35 !important;
+      }
+      #site-nav.nav-on-light a {
+        color: rgba(24, 28, 30, 0.7) !important;
+      }
+      #site-nav.nav-on-light a:hover {
+        color: #0f2f35 !important;
+      }
+      #site-nav.nav-on-light .nav-cta,
+      #site-nav.nav-on-light .nav-cta:hover {
+        color: #ffffff !important;
+        background-color: #124a4f !important;
+      }
+      #site-nav.nav-on-light a.border-b-2 {
+        color: #0f2f35 !important;
+        border-color: #0f2f35 !important;
+      }
+      #site-nav .nav-cta {
+        background-color: #205e61 !important;
+        color: #ffffff !important;
+      }
     </style>
   </head>
-  <body class="bg-surface text-on-surface selection:bg-secondary/30">
+  <body
+    class="bg-surface text-on-surface selection:bg-secondary/30 overflow-x-hidden"
+  >
     <!-- TopNavBar -->
     <nav
-      class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/10"
+      id="site-nav"
+      data-scroll-switch="90"
+      class="fixed top-0 w-full z-50 backdrop-blur-md border-b nav-on-dark"
     >
       <div
-        class="flex justify-between items-center w-full py-3 max-w-[1500px] mx-auto"
+        class="flex justify-between items-center w-full py-3 px-4 sm:px-6 max-w-[1500px] mx-auto"
       >
-        <div class="text-xl font-bold tracking-tighter text-white">
+        <div
+          class="nav-brand text-base sm:text-xl font-bold tracking-tighter text-white"
+        >
           Prodisenyo Builders
         </div>
         <div class="hidden md:flex gap-10 items-center">
@@ -148,17 +219,64 @@
             >Contact</a
           >
         </div>
-        <button
-          class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
+        <a
+          href="/pages/contact.html"
+          class="nav-cta hidden sm:inline-block bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
         >
           Get Quote
+        </a>
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          class="md:hidden text-white/90 hover:text-white transition-colors"
+        >
+          <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-white/10 px-4 py-4 bg-black/30 backdrop-blur-md"
+      >
+        <div class="flex flex-col gap-3">
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/"
+            >Home</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/portfolio.html"
+            >Projects</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white"
+            href="/pages/services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/about.html"
+            >About</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/contact.html"
+            >Contact</a
+          >
+          <a
+            href="/pages/contact.html"
+            class="nav-cta inline-block mt-2 bg-primary text-on-primary px-6 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold text-center"
+            >Get Quote</a
+          >
+        </div>
       </div>
     </nav>
     <main>
       <!-- Hero Section -->
       <section
-        class="bg-[#0a1a1e] p-12 gap-0 relative overflow-hidden border-t border-white/5"
+        class="bg-[#0a1a1e] px-4 sm:px-6 md:px-12 py-12 gap-0 relative overflow-hidden border-t border-white/5"
       >
         <div class="py-20 max-w-[1500px] mx-auto relative z-10">
           <div class="flex items-center gap-4 mb-10">
@@ -170,7 +288,7 @@
           </div>
 
           <h1
-            class="text-6xl md:text-[8rem] font-black text-white leading-[0.8] tracking-tighter mb-12 uppercase"
+            class="text-4xl sm:text-5xl md:text-[8rem] font-black text-white leading-[0.8] tracking-tighter mb-12 uppercase"
           >
             We build the <br />
             <span class="text-[#14b8a6]">Infrastructure</span> <br />
@@ -205,7 +323,7 @@
       </section>
 
       <section class="bg-[#0a1a1e] border-t border-white/5">
-        <div class="grid grid-cols-12 min-h-[750px]">
+        <div class="grid grid-cols-12 min-h-[560px] md:min-h-[750px]">
           <div class="col-span-12 lg:col-span-7 overflow-hidden relative group">
             <img
               class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000"
@@ -216,14 +334,14 @@
               class="absolute inset-0 bg-gradient-to-t from-[#0a1a1e] via-transparent to-transparent"
             ></div>
             <div
-              class="absolute inset-0 p-12 md:p-20 flex flex-col justify-end"
+              class="absolute inset-0 p-6 sm:p-8 md:p-20 flex flex-col justify-end"
             >
               <span
-                class="text-8xl font-black text-white/10 mb-2 tracking-tighter"
+                class="text-6xl sm:text-7xl md:text-8xl font-black text-white/10 mb-2 tracking-tighter"
                 >01</span
               >
               <h2
-                class="text-5xl font-black text-white uppercase tracking-tighter leading-none"
+                class="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tighter leading-none"
               >
                 Structural <br /><span class="text-[#14b8a6]">Engineering</span>
               </h2>
@@ -231,7 +349,7 @@
           </div>
 
           <div
-            class="col-span-12 lg:col-span-5 bg-[#0c1f24] p-12 md:p-24 flex flex-col justify-center border-l border-white/5"
+            class="col-span-12 lg:col-span-5 bg-[#0c1f24] p-6 sm:p-8 md:p-24 flex flex-col justify-center border-l border-white/5"
           >
             <div class="max-w-md">
               <h3
@@ -240,7 +358,7 @@
                 Precision First
               </h3>
               <p
-                class="text-2xl text-white/70 leading-tight font-medium mb-12 tracking-tight"
+                class="text-xl sm:text-2xl text-white/70 leading-tight font-medium mb-12 tracking-tight"
               >
                 Our engineering core focuses on the integrity of complex
                 systems. From seismic analysis to advanced material science.
@@ -299,9 +417,9 @@
       </section>
 
       <section class="bg-[#0a1a1e] border-t border-white/5">
-        <div class="grid grid-cols-12 min-h-[750px]">
+        <div class="grid grid-cols-12 min-h-[560px] md:min-h-[750px]">
           <div
-            class="col-span-12 lg:col-span-5 bg-[#0c1f24] p-12 md:p-24 flex flex-col justify-center order-2 lg:order-1 border-r border-white/5"
+            class="col-span-12 lg:col-span-5 bg-[#0c1f24] p-6 sm:p-8 md:p-24 flex flex-col justify-center order-2 lg:order-1 border-r border-white/5"
           >
             <div class="max-w-md ml-auto">
               <h3
@@ -310,7 +428,7 @@
                 Aesthetic Utility
               </h3>
               <p
-                class="text-2xl text-white/70 leading-tight font-medium mb-12 tracking-tight"
+                class="text-xl sm:text-2xl text-white/70 leading-tight font-medium mb-12 tracking-tight"
               >
                 Designing monolithic spaces that breathe. Our philosophy centers
                 on balance through mass and light.
@@ -379,14 +497,14 @@
               class="absolute inset-0 bg-gradient-to-t from-[#0a1a1e] via-transparent to-transparent"
             ></div>
             <div
-              class="absolute inset-0 p-12 md:p-20 flex flex-col justify-end text-right"
+              class="absolute inset-0 p-6 sm:p-8 md:p-20 flex flex-col justify-end text-right"
             >
               <span
-                class="text-8xl font-black text-white/10 mb-2 tracking-tighter"
+                class="text-6xl sm:text-7xl md:text-8xl font-black text-white/10 mb-2 tracking-tighter"
                 >02</span
               >
               <h2
-                class="text-5xl font-black text-white uppercase tracking-tighter leading-none"
+                class="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tighter leading-none"
               >
                 Architectural <br /><span class="text-[#14b8a6]">Vision</span>
               </h2>
@@ -396,7 +514,7 @@
       </section>
 
       <section class="bg-[#0a1a1e] border-y border-white/5">
-        <div class="grid grid-cols-12 min-h-[750px]">
+        <div class="grid grid-cols-12 min-h-[560px] md:min-h-[750px]">
           <div class="col-span-12 lg:col-span-7 overflow-hidden relative group">
             <img
               class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-1000"
@@ -407,14 +525,14 @@
               class="absolute inset-0 bg-gradient-to-t from-[#0a1a1e] via-transparent to-transparent"
             ></div>
             <div
-              class="absolute inset-0 p-12 md:p-20 flex flex-col justify-end"
+              class="absolute inset-0 p-6 sm:p-8 md:p-20 flex flex-col justify-end"
             >
               <span
-                class="text-8xl font-black text-white/10 mb-2 tracking-tighter"
+                class="text-6xl sm:text-7xl md:text-8xl font-black text-white/10 mb-2 tracking-tighter"
                 >03</span
               >
               <h2
-                class="text-5xl font-black text-white uppercase tracking-tighter leading-none"
+                class="text-3xl sm:text-4xl md:text-5xl font-black text-white uppercase tracking-tighter leading-none"
               >
                 Construction <br /><span class="text-[#14b8a6]"
                   >Management</span
@@ -424,7 +542,7 @@
           </div>
 
           <div
-            class="col-span-12 lg:col-span-5 bg-[#0c1f24] p-12 md:p-24 flex flex-col justify-center border-l border-white/5"
+            class="col-span-12 lg:col-span-5 bg-[#0c1f24] p-6 sm:p-8 md:p-24 flex flex-col justify-center border-l border-white/5"
           >
             <div class="max-w-md">
               <h3
@@ -433,7 +551,7 @@
                 Absolute Execution
               </h3>
               <p
-                class="text-2xl text-white/70 leading-tight font-medium mb-12 tracking-tight"
+                class="text-xl sm:text-2xl text-white/70 leading-tight font-medium mb-12 tracking-tight"
               >
                 We bridge the gap between design and reality. Our management
                 teams ensure timelines are met with uncompromising standards.
@@ -489,7 +607,7 @@
       <!-- CTA Section: Asymmetric -->
       <section class="py-20 max-w-[1500px] mx-auto relative">
         <div
-          class="bg-[#0c1f24] p-12 grid grid-cols-12 gap-8 relative overflow-hidden border border-white/5 shadow-2xl"
+          class="bg-[#0c1f24] p-6 sm:p-8 md:p-12 grid grid-cols-12 gap-8 relative overflow-hidden border border-white/5 shadow-2xl"
         >
           <div
             class="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -511,7 +629,7 @@
             </div>
 
             <h2
-              class="text-5xl md:text-6xl font-black text-white mb-10 tracking-tighter leading-[0.85] uppercase"
+              class="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-10 tracking-tighter leading-[0.85] uppercase"
             >
               Ready to commence your <br />
               <span class="text-[#14b8a6]">Next Landmark</span> project?
@@ -525,15 +643,25 @@
               structural integrity.
             </p>
 
-            <button
-              class="group relative bg-[#14b8a6] text-[#0a1a1e] px-14 py-6 font-black uppercase tracking-[0.2em] text-xs transition-all duration-500 hover:scale-[1.02]"
-            >
-              Inquire Now
-              <span
-                class="ml-4 transition-transform group-hover:translate-x-2 inline-block"
-                >→</span
+            <div class="flex flex-wrap gap-6">
+              <a
+                href="/pages/contact.html"
+                class="group relative bg-[#14b8a6] text-[#0a1a1e] w-full sm:w-auto text-center px-10 sm:px-14 py-6 font-black uppercase tracking-[0.2em] text-xs transition-all duration-500 hover:scale-[1.02]"
               >
-            </button>
+                Inquire Now
+                <span
+                  class="ml-4 transition-transform group-hover:translate-x-2 inline-block"
+                  >→</span
+                >
+              </a>
+
+              <a
+                href="/pages/about.html"
+                class="border border-white/20 text-white w-full sm:w-auto text-center px-10 sm:px-14 py-6 font-black uppercase tracking-[0.2em] text-xs hover:bg-white/5 hover:border-white/40 transition-all duration-300"
+              >
+                Learn More
+              </a>
+            </div>
           </div>
 
           <div
@@ -605,6 +733,13 @@
           <nav class="flex flex-col gap-4">
             <a
               class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="https://www.facebook.com/search/top?q=prodisenyo%20builders"
+              target="_blank"
+              rel="noreferrer"
+              >Facebook</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
               href="#"
               >LinkedIn</a
             >
@@ -612,11 +747,6 @@
               class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
               href="#"
               >Instagram</a
-            >
-            <a
-              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
-              href="#"
-              >ArchDaily</a
             >
           </nav>
         </div>
@@ -662,22 +792,60 @@
             </span>
           </div>
 
-          <div class="flex gap-10 opacity-20 group">
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >architecture</span
+          <div class="flex gap-8 opacity-20 group">
+            <a
+              href="https://www.facebook.com/search/top?q=prodisenyo%20builders"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              class="hover:text-[#14b8a6] transition-colors cursor-pointer"
             >
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >engineering</span
-            >
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >apartment</span
-            >
+              <i class="fa-brands fa-facebook-f text-2xl"></i>
+            </a>
+            <i
+              class="fa-brands fa-linkedin-in text-2xl hover:text-[#14b8a6] transition-colors cursor-pointer"
+            ></i>
+            <i
+              class="fa-brands fa-instagram text-2xl hover:text-[#14b8a6] transition-colors cursor-pointer"
+            ></i>
           </div>
         </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        const nav = document.getElementById("site-nav");
+        if (!nav) return;
+        const menuToggle = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener("click", () => {
+            const expanded =
+              menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!expanded));
+            mobileMenu.classList.toggle("hidden", expanded);
+          });
+
+          window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+              mobileMenu.classList.add("hidden");
+              menuToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        const switchAt = Number(nav.getAttribute("data-scroll-switch") || 80);
+
+        const syncNavContrast = () => {
+          const lightMode = window.scrollY > switchAt;
+          nav.classList.toggle("nav-on-light", lightMode);
+          nav.classList.toggle("nav-on-dark", !lightMode);
+        };
+
+        syncNavContrast();
+        window.addEventListener("scroll", syncNavContrast, { passive: true });
+      })();
+    </script>
   </body>
 </html>

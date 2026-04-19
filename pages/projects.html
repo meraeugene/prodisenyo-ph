@@ -13,6 +13,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
@@ -103,19 +107,84 @@
           "GRAD" 0,
           "opsz" 24;
       }
+      html {
+        scroll-behavior: smooth;
+      }
+      #site-nav {
+        transition:
+          background-color 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      #site-nav .nav-brand,
+      #site-nav a,
+      #site-nav .nav-cta {
+        transition:
+          color 0.3s ease,
+          border-color 0.3s ease,
+          background-color 0.3s ease;
+      }
+      #site-nav.nav-on-dark {
+        background-color: rgba(247, 250, 252, 0.08);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+      #site-nav.nav-on-dark .nav-brand {
+        color: #ffffff !important;
+      }
+      #site-nav.nav-on-dark a {
+        color: rgba(255, 255, 255, 0.72) !important;
+      }
+      #site-nav.nav-on-dark a:hover {
+        color: #ffffff !important;
+      }
+      #site-nav.nav-on-dark a.border-b-2 {
+        color: #ffffff !important;
+        border-color: #ffffff !important;
+      }
+      #site-nav.nav-on-light {
+        background-color: rgba(247, 250, 252, 0.94);
+        border-color: rgba(24, 28, 30, 0.12);
+        box-shadow: 0 8px 24px rgba(15, 47, 53, 0.08);
+      }
+      #site-nav.nav-on-light .nav-brand {
+        color: #0f2f35 !important;
+      }
+      #site-nav.nav-on-light a {
+        color: rgba(24, 28, 30, 0.7) !important;
+      }
+      #site-nav.nav-on-light a:hover {
+        color: #0f2f35 !important;
+      }
+      #site-nav.nav-on-light .nav-cta,
+      #site-nav.nav-on-light .nav-cta:hover {
+        color: #ffffff !important;
+        background-color: #124a4f !important;
+      }
+      #site-nav.nav-on-light a.border-b-2 {
+        color: #0f2f35 !important;
+        border-color: #0f2f35 !important;
+      }
+      #site-nav .nav-cta {
+        background-color: #205e61 !important;
+        color: #ffffff !important;
+      }
     </style>
   </head>
   <body
-    class="bg-surface text-on-surface selection:bg-secondary selection:text-on-secondary"
+    class="bg-surface text-on-surface selection:bg-secondary selection:text-on-secondary overflow-x-hidden"
   >
     <!-- TopNavBar -->
     <nav
-      class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/10"
+      id="site-nav"
+      data-scroll-switch="90"
+      class="fixed top-0 w-full z-50 backdrop-blur-md border-b nav-on-dark"
     >
       <div
-        class="flex justify-between items-center w-full py-3 max-w-[1500px] mx-auto"
+        class="flex justify-between items-center w-full py-3 px-4 sm:px-6 max-w-[1500px] mx-auto"
       >
-        <div class="text-xl font-bold tracking-tighter text-white">
+        <div
+          class="nav-brand text-base sm:text-xl font-bold tracking-tighter text-white"
+        >
           Prodisenyo Builders
         </div>
         <div class="hidden md:flex gap-10 items-center">
@@ -145,11 +214,58 @@
             >Contact</a
           >
         </div>
-        <button
-          class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
+        <a
+          href="/pages/contact.html"
+          class="nav-cta hidden sm:inline-block bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
         >
           Get Quote
+        </a>
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          class="md:hidden text-white/90 hover:text-white transition-colors"
+        >
+          <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-white/10 px-4 py-4 bg-black/30 backdrop-blur-md"
+      >
+        <div class="flex flex-col gap-3">
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/"
+            >Home</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white"
+            href="/pages/projects.html"
+            >Projects</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/about.html"
+            >About</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/contact.html"
+            >Contact</a
+          >
+          <a
+            href="/pages/contact.html"
+            class="nav-cta inline-block mt-2 bg-primary text-on-primary px-6 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold text-center"
+            >Get Quote</a
+          >
+        </div>
       </div>
     </nav>
     <main>
@@ -159,6 +275,7 @@
       >
         <div class="absolute inset-0 z-0">
           <img
+            id="project-hero-image"
             alt="The Meridian Atrium"
             class="w-full h-full object-cover opacity-70 grayscale"
             src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
@@ -171,30 +288,37 @@
           ></div>
         </div>
 
-        <div class="relative z-10 pb-16 md:pb-24 max-w-[1500px] w-full mx-auto">
+        <div
+          class="relative z-10 pb-16 md:pb-24 px-4 sm:px-6 md:px-0 max-w-[1500px] w-full mx-auto"
+        >
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
             <div class="lg:col-span-8">
               <div class="flex items-center gap-4 mb-8">
                 <span
+                  id="project-case-label"
                   class="bg-[#14b8a6] text-white px-3 py-1 text-[10px] font-black uppercase tracking-[0.3em]"
                 >
                   Case Study 01
                 </span>
                 <div class="h-px w-24 bg-white/20"></div>
                 <span
+                  id="project-date-label"
                   class="text-white/40 text-[10px] font-bold uppercase tracking-[0.3em]"
                   >Completed 2025</span
                 >
               </div>
 
               <h1
-                class="text-5xl md:text-[7rem] font-black text-white leading-[0.9] tracking-tighter uppercase mb-8"
+                class="text-4xl sm:text-5xl md:text-[7rem] font-black text-white leading-[0.9] tracking-tighter uppercase mb-8"
               >
-                The Meridian <br />
-                <span class="text-[#14b8a6]">Atrium</span>
+                <span id="project-title-main">The Meridian</span> <br />
+                <span id="project-title-accent" class="text-[#14b8a6]"
+                  >Atrium</span
+                >
               </h1>
 
               <p
+                id="project-summary"
                 class="text-white/80 max-w-2xl font-medium text-xl md:text-2xl leading-relaxed"
               >
                 Engineering a high-density commercial hub through the lens of
@@ -214,7 +338,9 @@
                 <div
                   class="text-sm font-bold text-white uppercase tracking-widest"
                 >
-                  Financial District / Central
+                  <span id="project-location"
+                    >Financial District / Central</span
+                  >
                 </div>
               </div>
               <div>
@@ -226,7 +352,7 @@
                 <div
                   class="text-sm font-bold text-white uppercase tracking-widest"
                 >
-                  Structural Engineering & BIM
+                  <span id="project-scope">Structural Engineering & BIM</span>
                 </div>
               </div>
               <div>
@@ -236,12 +362,14 @@
                   Status
                 </div>
                 <div
+                  id="project-status"
                   class="text-sm font-bold text-teal-400 uppercase tracking-widest flex items-center gap-2"
                 >
                   <span
+                    id="project-status-dot"
                     class="w-1.5 h-1.5 rounded-full bg-teal-400 animate-pulse"
                   ></span>
-                  Operational
+                  <span id="project-status-text">Operational</span>
                 </div>
               </div>
             </div>
@@ -249,33 +377,36 @@
         </div>
 
         <div
-          class="absolute top-1/2 right-[-5%] rotate-90 text-[10rem] font-black text-white/[0.02] select-none pointer-events-none uppercase"
+          class="absolute hidden md:block top-1/2 right-[-5%] rotate-90 text-[10rem] font-black text-white/[0.02] select-none pointer-events-none uppercase"
         >
           Verticality
         </div>
       </section>
 
       <!-- Technical Specifications Table -->
-      <section class="bg-[#0a1a1e] py-32 px-12 border-t border-white/5">
+      <section
+        class="bg-[#0a1a1e] py-32 px-4 sm:px-6 md:px-12 border-t border-white/5"
+      >
         <div class="max-w-[1500px] mx-auto">
           <div class="flex flex-col lg:flex-row gap-20">
             <div class="lg:w-1/3">
               <div class="flex items-center gap-4 mb-8">
                 <span class="w-10 h-px bg-[#14b8a6]"></span>
                 <span
-                  class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.5em]"
+                  class="text-[#14b8a6] font-black text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.5em]"
                   >Data Sheet // 2026</span
                 >
               </div>
 
               <h2
-                class="text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.9]"
+                class="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-8 tracking-tighter uppercase leading-[0.9]"
               >
                 Technical <br />
                 <span class="text-white/20">Specs</span>
               </h2>
 
               <p
+                id="project-tech-summary"
                 class="text-white/60 font-medium text-lg md:text-xl leading-relaxed max-w-sm"
               >
                 The structural integrity of The Meridian Atrium relies on a
@@ -297,10 +428,12 @@
                   </span>
                   <div class="flex items-baseline gap-3">
                     <span
-                      class="text-6xl font-black text-white tracking-tighter"
+                      id="project-spec-height-value"
+                      class="text-5xl sm:text-6xl font-black text-white tracking-tighter"
                       >312.5</span
                     >
                     <span
+                      id="project-spec-height-unit"
                       class="text-xs font-bold text-white/40 uppercase tracking-[0.2em]"
                       >Meters</span
                     >
@@ -316,6 +449,7 @@
                     02 / Primary Materials
                   </span>
                   <span
+                    id="project-spec-materials"
                     class="text-2xl font-black text-white uppercase tracking-tight leading-tight"
                   >
                     High-Tensile Steel <br />
@@ -333,10 +467,12 @@
                   </span>
                   <div class="flex items-baseline gap-3">
                     <span
-                      class="text-6xl font-black text-white tracking-tighter"
+                      id="project-spec-area-value"
+                      class="text-5xl sm:text-6xl font-black text-white tracking-tighter"
                       >1.2</span
                     >
                     <span
+                      id="project-spec-area-unit"
                       class="text-xs font-bold text-white/40 uppercase tracking-[0.2em]"
                       >Million SQ FT</span
                     >
@@ -352,6 +488,7 @@
                     04 / Structural Type
                   </span>
                   <span
+                    id="project-spec-system"
                     class="text-2xl font-black text-white uppercase tracking-tight leading-tight"
                   >
                     Steel Diagrid <br />
@@ -375,20 +512,21 @@
             <div class="lg:col-span-6">
               <div class="flex items-center gap-4 mb-10">
                 <span
-                  class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.6em]"
+                  class="text-[#14b8a6] font-black text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.6em]"
                   >Section // 02</span
                 >
                 <div class="h-px flex-1 bg-neutral-100"></div>
               </div>
 
               <h2
-                class="text-6xl md:text-8xl font-black text-[#1B434E] uppercase tracking-tighter leading-[0.85] mb-12"
+                class="text-4xl sm:text-6xl md:text-8xl font-black text-[#1B434E] uppercase tracking-tighter leading-[0.85] mb-12"
               >
                 Design <br />
                 <span class="text-neutral-200">Narrative</span>
               </h2>
 
               <p
+                id="project-narrative-lead"
                 class="text-[#1B434E]/90 text-xl md:text-3xl leading-tight font-bold tracking-tight mb-8"
               >
                 The Meridian Atrium stands as a testament to the intersection of
@@ -396,6 +534,7 @@
               </p>
 
               <p
+                id="project-narrative-sub"
                 class="text-[#1B434E]/60 text-lg md:text-xl leading-relaxed font-medium max-w-xl"
               >
                 Every angle is a deliberate dialogue between the ground plane
@@ -409,6 +548,7 @@
                 class="aspect-[16/10] bg-[#0a1a1e] overflow-hidden shadow-2xl group"
               >
                 <img
+                  id="project-narrative-image"
                   alt="Interior Atrium Study"
                   class="w-full h-full object-cover"
                   src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
@@ -421,9 +561,12 @@
                 ></div>
               </div>
 
-              <div class="mt-6 flex justify-between items-start">
+              <div
+                class="mt-6 flex flex-col sm:flex-row justify-between items-start gap-3 sm:gap-0"
+              >
                 <div class="space-y-1">
                   <p
+                    id="project-narrative-caption"
                     class="text-[10px] font-black uppercase tracking-widest text-[#1B434E]"
                   >
                     Interior Central Void Study
@@ -469,10 +612,11 @@
             </div>
 
             <div class="lg:col-span-5">
-              <div class="relative p-12 bg-[#0a1a1e] text-white">
+              <div class="relative p-8 md:p-12 bg-[#0a1a1e] text-white">
                 <div class="mb-8 text-[#14b8a6] text-4xl font-serif">“</div>
 
                 <p
+                  id="project-quote"
                   class="text-2xl md:text-3xl font-black tracking-tight leading-tight mb-10"
                 >
                   The challenge was to create a sense of weightlessness within a
@@ -507,7 +651,9 @@
       </section>
 
       <!-- Gallery of Construction Sketches -->
-      <section class="bg-[#0a1a1e] py-32 px-12 border-t border-white/5">
+      <section
+        class="bg-[#0a1a1e] py-32 px-4 sm:px-6 md:px-12 border-t border-white/5"
+      >
         <div class="max-w-[1500px] mx-auto">
           <div
             class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8"
@@ -521,7 +667,7 @@
                 >
               </div>
               <h2
-                class="text-5xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none"
+                class="text-4xl sm:text-5xl md:text-6xl font-black text-white uppercase tracking-tighter leading-none"
               >
                 Technical <span class="text-white/20 italic">Archives</span>
               </h2>
@@ -651,16 +797,18 @@
             Interested in our structural approach?
           </h2>
           <div class="flex flex-col md:flex-row gap-4 justify-center">
-            <button
-              class="bg-primary text-on-primary px-12 py-5 font-headline uppercase tracking-widest text-sm hover:bg-primary-container transition-colors"
-            >
-              Download Technical Brief
-            </button>
-            <button
-              class="border-b-2 border-primary text-primary px-12 py-5 font-headline uppercase tracking-widest text-sm hover:bg-surface-container-low transition-colors"
+            <a
+              href="/pages/portfolio.html"
+              class="bg-primary text-on-primary w-full sm:w-auto text-center px-12 py-5 font-headline uppercase tracking-widest text-sm hover:bg-primary-container transition-colors"
             >
               View More Projects
-            </button>
+            </a>
+            <a
+              href="/pages/services.html"
+              class="border-b-2 border-primary text-primary w-full sm:w-auto text-center px-12 py-5 font-headline uppercase tracking-widest text-sm hover:bg-surface-container-low transition-colors"
+            >
+              Services & Expertise
+            </a>
           </div>
         </div>
       </section>
@@ -726,6 +874,13 @@
           <nav class="flex flex-col gap-4">
             <a
               class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="https://www.facebook.com/search/top?q=prodisenyo%20builders"
+              target="_blank"
+              rel="noreferrer"
+              >Facebook</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
               href="#"
               >LinkedIn</a
             >
@@ -733,11 +888,6 @@
               class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
               href="#"
               >Instagram</a
-            >
-            <a
-              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
-              href="#"
-              >ArchDaily</a
             >
           </nav>
         </div>
@@ -783,22 +933,136 @@
             </span>
           </div>
 
-          <div class="flex gap-10 opacity-20 group">
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >architecture</span
+          <div class="flex gap-8 opacity-20 group">
+            <a
+              href="https://www.facebook.com/search/top?q=prodisenyo%20builders"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              class="hover:text-[#14b8a6] transition-colors cursor-pointer"
             >
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >engineering</span
-            >
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >apartment</span
-            >
+              <i class="fa-brands fa-facebook-f text-2xl"></i>
+            </a>
+            <i
+              class="fa-brands fa-linkedin-in text-2xl hover:text-[#14b8a6] transition-colors cursor-pointer"
+            ></i>
+            <i
+              class="fa-brands fa-instagram text-2xl hover:text-[#14b8a6] transition-colors cursor-pointer"
+            ></i>
           </div>
         </div>
       </div>
     </footer>
+    <script src="./projects-data.js"></script>
+    <script>
+      (function () {
+        const nav = document.getElementById("site-nav");
+        if (!nav) return;
+        const menuToggle = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener("click", () => {
+            const expanded =
+              menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!expanded));
+            mobileMenu.classList.toggle("hidden", expanded);
+          });
+
+          window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+              mobileMenu.classList.add("hidden");
+              menuToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        const switchAt = Number(nav.getAttribute("data-scroll-switch") || 80);
+
+        const syncNavContrast = () => {
+          const lightMode = window.scrollY > switchAt;
+          nav.classList.toggle("nav-on-light", lightMode);
+          nav.classList.toggle("nav-on-dark", !lightMode);
+        };
+
+        syncNavContrast();
+        window.addEventListener("scroll", syncNavContrast, { passive: true });
+
+        const projects = window.PROJECTS_DATA || {};
+
+        const projectKey = new URLSearchParams(window.location.search).get(
+          "project",
+        );
+        const fallbackKey = projects.meridian
+          ? "meridian"
+          : Object.keys(projects)[0];
+        const data = projects[projectKey] || projects[fallbackKey];
+        if (!data) return;
+
+        const setText = (id, value) => {
+          const el = document.getElementById(id);
+          if (el && typeof value === "string") el.textContent = value;
+        };
+        const setHtml = (id, value) => {
+          const el = document.getElementById(id);
+          if (el && typeof value === "string") el.innerHTML = value;
+        };
+
+        document.title = data.pageTitle;
+        setText("project-case-label", data.caseLabel);
+        setText("project-date-label", data.dateLabel);
+        setText("project-title-main", data.titleMain);
+        setText("project-title-accent", data.titleAccent);
+        setText("project-summary", data.summary);
+        setText("project-location", data.location);
+        setText("project-scope", data.scope);
+        setText("project-status-text", data.status);
+        setText("project-tech-summary", data.techSummary);
+        setText("project-spec-height-value", data.specHeightValue);
+        setText("project-spec-height-unit", data.specHeightUnit);
+        setHtml("project-spec-materials", data.specMaterials);
+        setText("project-spec-area-value", data.specAreaValue);
+        setText("project-spec-area-unit", data.specAreaUnit);
+        setHtml("project-spec-system", data.specSystem);
+        setText("project-narrative-lead", data.narrativeLead);
+        setText("project-narrative-sub", data.narrativeSub);
+        setText("project-narrative-caption", data.narrativeCaption);
+        setText("project-quote", data.quote);
+
+        const heroImage = document.getElementById("project-hero-image");
+        if (heroImage) {
+          heroImage.src = data.heroImage;
+          heroImage.alt = data.heroAlt;
+        }
+
+        const narrativeImage = document.getElementById(
+          "project-narrative-image",
+        );
+        if (narrativeImage) {
+          narrativeImage.src = data.narrativeImage;
+          narrativeImage.alt = data.narrativeImageAlt;
+        }
+
+        const statusEl = document.getElementById("project-status");
+        if (statusEl) {
+          statusEl.classList.remove(
+            "text-teal-400",
+            "text-emerald-400",
+            "text-cyan-300",
+          );
+          statusEl.classList.add(data.statusColorClass);
+        }
+
+        const statusDot = document.getElementById("project-status-dot");
+        if (statusDot) {
+          statusDot.classList.remove(
+            "bg-teal-400",
+            "bg-emerald-400",
+            "bg-cyan-300",
+          );
+          statusDot.classList.add(data.statusDotColorClass);
+        }
+      })();
+    </script>
   </body>
 </html>

@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
     <!-- Google Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@200;300;400;500;600&amp;display=swap"
@@ -98,6 +102,9 @@
           "GRAD" 0,
           "opsz" 24;
       }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: "Inter", sans-serif;
       }
@@ -107,17 +114,79 @@
       .brand-font {
         font-family: "Space Grotesk", sans-serif;
       }
+      #site-nav {
+        transition:
+          background-color 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      #site-nav .nav-brand,
+      #site-nav a,
+      #site-nav .nav-cta {
+        transition:
+          color 0.3s ease,
+          border-color 0.3s ease,
+          background-color 0.3s ease;
+      }
+      #site-nav.nav-on-dark {
+        background-color: rgba(247, 250, 252, 0.08);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+      #site-nav.nav-on-dark .nav-brand {
+        color: #ffffff !important;
+      }
+      #site-nav.nav-on-dark a {
+        color: rgba(255, 255, 255, 0.72) !important;
+      }
+      #site-nav.nav-on-dark a:hover {
+        color: #ffffff !important;
+      }
+      #site-nav.nav-on-dark a.border-b-2 {
+        color: #ffffff !important;
+        border-color: #ffffff !important;
+      }
+      #site-nav.nav-on-light {
+        background-color: rgba(247, 250, 252, 0.94);
+        border-color: rgba(24, 28, 30, 0.12);
+        box-shadow: 0 8px 24px rgba(15, 47, 53, 0.08);
+      }
+      #site-nav.nav-on-light .nav-brand {
+        color: #0f2f35 !important;
+      }
+      #site-nav.nav-on-light a {
+        color: rgba(24, 28, 30, 0.7) !important;
+      }
+      #site-nav.nav-on-light a:hover {
+        color: #0f2f35 !important;
+      }
+      #site-nav.nav-on-light .nav-cta,
+      #site-nav.nav-on-light .nav-cta:hover {
+        color: #ffffff !important;
+        background-color: #124a4f !important;
+      }
+      #site-nav.nav-on-light a.border-b-2 {
+        color: #0f2f35 !important;
+        border-color: #0f2f35 !important;
+      }
+      #site-nav .nav-cta {
+        background-color: #205e61 !important;
+        color: #ffffff !important;
+      }
     </style>
   </head>
-  <body class="bg-surface text-on-surface">
+  <body class="bg-surface text-on-surface overflow-x-hidden">
     <!-- TopNavBar -->
     <nav
-      class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/10"
+      id="site-nav"
+      data-scroll-switch="90"
+      class="fixed top-0 w-full z-50 backdrop-blur-md border-b nav-on-dark"
     >
       <div
-        class="flex justify-between items-center w-full py-3 max-w-[1500px] mx-auto"
+        class="flex justify-between items-center w-full py-3 px-4 sm:px-6 max-w-[1500px] mx-auto"
       >
-        <div class="text-xl font-bold tracking-tighter text-white">
+        <div
+          class="nav-brand text-base sm:text-xl font-bold tracking-tighter text-white"
+        >
           Prodisenyo Builders
         </div>
         <div class="hidden md:flex gap-10 items-center">
@@ -147,23 +216,70 @@
             >Contact</a
           >
         </div>
-        <button
-          class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
+        <a
+          href="/pages/contact.html"
+          class="nav-cta hidden sm:inline-block bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
         >
           Get Quote
+        </a>
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          class="md:hidden text-white/90 hover:text-white transition-colors"
+        >
+          <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-white/10 px-4 py-4 bg-black/30 backdrop-blur-md"
+      >
+        <div class="flex flex-col gap-3">
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/"
+            >Home</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/portfolio.html"
+            >Projects</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/about.html"
+            >About</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white"
+            href="/pages/contact.html"
+            >Contact</a
+          >
+          <a
+            href="/pages/contact.html"
+            class="nav-cta inline-block mt-2 bg-primary text-on-primary px-6 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold text-center"
+            >Get Quote</a
+          >
+        </div>
       </div>
     </nav>
     <main>
       <!-- Hero Section -->
       <section
-        class="bg-[#0a1a1e] px-6 md:px-12 py-28 border-t border-white/5 relative overflow-hidden"
+        class="bg-[#0a1a1e] px-4 sm:px-6 md:px-12 py-24 md:py-28 border-t border-white/5 relative overflow-hidden"
       >
         <div
-          class="absolute top-10 right-10 opacity-[0.03] select-none pointer-events-none"
+          class="absolute top-10 right-10 opacity-[0.03] select-none pointer-events-none hidden sm:block"
         >
           <span
-            class="text-[10rem] font-black text-[#14b8a6] leading-none tracking-tighter"
+            class="text-[8rem] md:text-[10rem] font-black text-[#14b8a6] leading-none tracking-tighter"
             >INQ</span
           >
         </div>
@@ -174,14 +290,14 @@
           <div class="col-span-12 lg:col-span-8">
             <div class="flex items-center gap-4 mb-10">
               <span
-                class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.5em]"
+                class="text-[#14b8a6] font-black text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.5em]"
                 >System_Inquiry // 04</span
               >
               <div class="h-px w-20 bg-white/10"></div>
             </div>
 
             <h1
-              class="text-7xl md:text-[9rem] font-black text-white leading-[0.8] tracking-[-0.05em] uppercase"
+              class="text-4xl sm:text-6xl md:text-[9rem] font-black text-white leading-[0.8] tracking-[-0.05em] uppercase"
             >
               Build with <br />
               <span
@@ -211,8 +327,10 @@
       <!-- Main Content: Form & Info -->
       <section class="max-w-[1500px] mx-auto flex flex-col lg:flex-row">
         <!-- Left Side: Contact Form -->
-        <div class="lg:w-1/2 bg-surface_container_low py-24">
-          <div class="max-w-xl">
+        <div
+          class="lg:w-1/2 bg-surface_container_low py-16 md:py-24 px-4 sm:px-6 md:px-10"
+        >
+          <div class="max-w-xl mx-auto lg:mx-0">
             <h2
               class="text-3xl font-bold text-primary mb-12 uppercase tracking-tighter"
             >
@@ -267,7 +385,7 @@
                 ></textarea>
               </div>
               <button
-                class="bg-primary text-on-primary px-12 py-5 uppercase font-bold tracking-widest text-sm flex items-center gap-4 hover:bg-primary-container transition-colors group"
+                class="bg-primary text-on-primary w-full sm:w-auto justify-center px-12 py-5 uppercase font-bold tracking-widest text-sm flex items-center gap-4 hover:bg-primary-container transition-colors group"
                 type="submit"
               >
                 Submit Inquiry
@@ -289,8 +407,8 @@
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuArpmL1ebQ_1QqKJpOa84jA6w31ETVwy36kLWu9kCKqoko1ilS1v72y4ebMu1uv6qPmccYSu9R9ZhHD_iMzlxjGjIjM0FqO753ePabUAFNLSWPHJVrFJl6oPGaQf_K-7YNBS7qLF1BIIvbook7SX6vTSWxtFA8wP4MGGscjN3RGhakBSGQ0z1EfnhOqJJGah4rUMO4Lyta_1_KRVFud_Qq6ql_jCJq3epFbnhfr7wOIashA0dYDa9omRdwvfwSkfemhlSBc7bdW6TIJ"
             />
             <div class="absolute inset-0 bg-primary/20 backdrop-multiply"></div>
-            <div class="absolute bottom-12 left-12">
-              <div class="bg-surface p-8 shadow-2xl">
+            <div class="absolute bottom-4 left-4 md:bottom-12 md:left-12">
+              <div class="bg-surface p-6 md:p-8 shadow-2xl">
                 <span
                   class="label-md uppercase tracking-[0.2em] text-secondary font-bold mb-4 block"
                   >Headquarters</span
@@ -304,7 +422,7 @@
             </div>
           </div>
           <div
-            class="flex-grow bg-[#0a1a1e] p-12 lg:p-24 text-on-primary flex flex-col justify-center"
+            class="flex-grow bg-[#0a1a1e] p-6 sm:p-8 lg:p-24 text-on-primary flex flex-col justify-center"
           >
             <div class="grid grid-cols-1 md:grid-cols-2 gap-16">
               <div>
@@ -347,7 +465,9 @@
                 </div>
               </div>
             </div>
-            <div class="mt-20 border-t border-white/10 pt-12 flex gap-8">
+            <div
+              class="mt-20 border-t border-white/10 pt-12 flex flex-wrap gap-8"
+            >
               <a
                 class="text-white hover:text-secondary transition-colors"
                 href="#"
@@ -437,6 +557,13 @@
           <nav class="flex flex-col gap-4">
             <a
               class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="https://www.facebook.com/search/top?q=prodisenyo%20builders"
+              target="_blank"
+              rel="noreferrer"
+              >Facebook</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
               href="#"
               >LinkedIn</a
             >
@@ -444,11 +571,6 @@
               class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
               href="#"
               >Instagram</a
-            >
-            <a
-              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
-              href="#"
-              >ArchDaily</a
             >
           </nav>
         </div>
@@ -494,22 +616,60 @@
             </span>
           </div>
 
-          <div class="flex gap-10 opacity-20 group">
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >architecture</span
+          <div class="flex gap-8 opacity-20 group">
+            <a
+              href="https://www.facebook.com/search/top?q=prodisenyo%20builders"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              class="hover:text-[#14b8a6] transition-colors cursor-pointer"
             >
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >engineering</span
-            >
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >apartment</span
-            >
+              <i class="fa-brands fa-facebook-f text-2xl"></i>
+            </a>
+            <i
+              class="fa-brands fa-linkedin-in text-2xl hover:text-[#14b8a6] transition-colors cursor-pointer"
+            ></i>
+            <i
+              class="fa-brands fa-instagram text-2xl hover:text-[#14b8a6] transition-colors cursor-pointer"
+            ></i>
           </div>
         </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        const nav = document.getElementById("site-nav");
+        if (!nav) return;
+        const menuToggle = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener("click", () => {
+            const expanded =
+              menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!expanded));
+            mobileMenu.classList.toggle("hidden", expanded);
+          });
+
+          window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+              mobileMenu.classList.add("hidden");
+              menuToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        const switchAt = Number(nav.getAttribute("data-scroll-switch") || 80);
+
+        const syncNavContrast = () => {
+          const lightMode = window.scrollY > switchAt;
+          nav.classList.toggle("nav-on-light", lightMode);
+          nav.classList.toggle("nav-on-dark", !lightMode);
+        };
+
+        syncNavContrast();
+        window.addEventListener("scroll", syncNavContrast, { passive: true });
+      })();
+    </script>
   </body>
 </html>

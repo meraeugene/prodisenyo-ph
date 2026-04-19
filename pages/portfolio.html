@@ -15,6 +15,10 @@
       rel="stylesheet"
     />
     <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
       rel="stylesheet"
     />
@@ -95,6 +99,9 @@
           "GRAD" 0,
           "opsz" 24;
       }
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: "Inter", sans-serif;
         background-color: #f7fafc;
@@ -105,17 +112,79 @@
       h4 {
         font-family: "Space Grotesk", sans-serif;
       }
+      #site-nav {
+        transition:
+          background-color 0.3s ease,
+          border-color 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      #site-nav .nav-brand,
+      #site-nav a,
+      #site-nav .nav-cta {
+        transition:
+          color 0.3s ease,
+          border-color 0.3s ease,
+          background-color 0.3s ease;
+      }
+      #site-nav.nav-on-dark {
+        background-color: rgba(247, 250, 252, 0.08);
+        border-color: rgba(255, 255, 255, 0.12);
+      }
+      #site-nav.nav-on-dark .nav-brand {
+        color: #ffffff !important;
+      }
+      #site-nav.nav-on-dark a {
+        color: rgba(255, 255, 255, 0.72) !important;
+      }
+      #site-nav.nav-on-dark a:hover {
+        color: #ffffff !important;
+      }
+      #site-nav.nav-on-dark a.border-b-2 {
+        color: #ffffff !important;
+        border-color: #ffffff !important;
+      }
+      #site-nav.nav-on-light {
+        background-color: rgba(247, 250, 252, 0.94);
+        border-color: rgba(24, 28, 30, 0.12);
+        box-shadow: 0 8px 24px rgba(15, 47, 53, 0.08);
+      }
+      #site-nav.nav-on-light .nav-brand {
+        color: #0f2f35 !important;
+      }
+      #site-nav.nav-on-light a {
+        color: rgba(24, 28, 30, 0.7) !important;
+      }
+      #site-nav.nav-on-light a:hover {
+        color: #0f2f35 !important;
+      }
+      #site-nav.nav-on-light .nav-cta,
+      #site-nav.nav-on-light .nav-cta:hover {
+        color: #ffffff !important;
+        background-color: #124a4f !important;
+      }
+      #site-nav.nav-on-light a.border-b-2 {
+        color: #0f2f35 !important;
+        border-color: #0f2f35 !important;
+      }
+      #site-nav .nav-cta {
+        background-color: #205e61 !important;
+        color: #ffffff !important;
+      }
     </style>
   </head>
-  <body class="text-on-surface">
+  <body class="text-on-surface overflow-x-hidden">
     <!-- TopNavBar -->
     <nav
-      class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-md border-b border-white/10"
+      id="site-nav"
+      data-scroll-switch="90"
+      class="fixed top-0 w-full z-50 backdrop-blur-md border-b nav-on-dark"
     >
       <div
-        class="flex justify-between items-center w-full py-3 max-w-[1500px] mx-auto"
+        class="flex justify-between items-center w-full py-3 px-4 sm:px-6 max-w-[1500px] mx-auto"
       >
-        <div class="text-xl font-bold tracking-tighter text-white">
+        <div
+          class="nav-brand text-base sm:text-xl font-bold tracking-tighter text-white"
+        >
           Prodisenyo Builders
         </div>
         <div class="hidden md:flex gap-10 items-center">
@@ -145,17 +214,66 @@
             >Contact</a
           >
         </div>
-        <button
-          class="bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
+        <a
+          href="/pages/contact.html"
+          class="nav-cta hidden sm:inline-block bg-primary text-on-primary px-8 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold hover:opacity-90 transition-opacity duration-300"
         >
           Get Quote
+        </a>
+        <button
+          id="mobile-menu-toggle"
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          class="md:hidden text-white/90 hover:text-white transition-colors"
+        >
+          <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
+      </div>
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-white/10 px-4 py-4 bg-black/30 backdrop-blur-md"
+      >
+        <div class="flex flex-col gap-3">
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/"
+            >Home</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white"
+            href="/pages/portfolio.html"
+            >Projects</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/services.html"
+            >Services</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/about.html"
+            >About</a
+          >
+          <a
+            class="font-['Space_Grotesk'] uppercase tracking-[0.1em] text-sm font-medium text-white/80"
+            href="/pages/contact.html"
+            >Contact</a
+          >
+          <a
+            href="/pages/contact.html"
+            class="nav-cta inline-block mt-2 bg-primary text-on-primary px-6 py-3 font-['Space_Grotesk'] uppercase tracking-widest text-xs font-bold text-center"
+            >Get Quote</a
+          >
+        </div>
       </div>
     </nav>
 
     <main>
       <!-- Header Section -->
-      <section class="bg-[#0a1a1e] pt-28 px-12 overflow-hidden relative">
+      <section
+        class="bg-[#0a1a1e] pt-24 md:pt-28 px-4 sm:px-6 md:px-12 overflow-hidden relative"
+      >
         <div class="max-w-[1500px] mx-auto">
           <div
             class="flex flex-col md:flex-row items-end justify-between gap-12 relative z-10"
@@ -171,7 +289,7 @@
               </div>
 
               <h1
-                class="text-7xl md:text-[10rem] font-black tracking-[ -0.05em] leading-[0.85] text-white mb-12 uppercase"
+                class="text-4xl sm:text-6xl md:text-[10rem] font-black tracking-[ -0.05em] leading-[0.85] text-white mb-12 uppercase"
               >
                 Structural <br />
                 <span
@@ -226,11 +344,11 @@
       >
         <div class="max-w-[1500px] mx-auto z-10 relative space-y-36">
           <div
-            class="grid grid-cols-12 gap-8 bg-[#0a1a1e] p-12 md:p-20 border border-white/5"
+            class="grid grid-cols-12 gap-8 bg-[#0a1a1e] p-6 sm:p-8 md:p-20 border border-white/5"
           >
             <div class="col-span-12 md:col-span-7">
               <h2
-                class="text-6xl md:text-8xl font-bold text-secondary-fixed uppercase tracking-tighter leading-[0.85] font-headline"
+                class="text-4xl sm:text-5xl md:text-8xl font-bold text-secondary-fixed uppercase tracking-tighter leading-[0.85] font-headline"
               >
                 Featured<br />
                 <span
@@ -245,7 +363,7 @@
               class="col-span-12 flex md:justify-end md:items-end mt-10 md:mt-0"
             >
               <a
-                href="#"
+                href="/pages/portfolio.html"
                 class="group flex items-center gap-6 pb-2 border-b-2 border-secondary-fixed hover:border-primary-fixed transition-all"
               >
                 <span
@@ -265,12 +383,12 @@
               class="col-span-12 md:col-span-1 text-left md:text-right md:pr-12 pt-4"
             >
               <span
-                class="text-7xl font-bold text-primary transition-colors leading-none block mb-2 font-headline"
+                class="text-5xl sm:text-6xl md:text-7xl font-bold text-primary transition-colors leading-none block mb-2 font-headline"
                 >01</span
               >
             </div>
 
-            <div class="col-span-12 md:col-span-3 pt-4 pr-12">
+            <div class="col-span-12 md:col-span-3 pt-4 md:pr-12">
               <span
                 class="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-6 block font-label"
                 >Residential // Luxury</span
@@ -288,7 +406,7 @@
               </p>
 
               <a
-                href="/pages/projects.html"
+                href="/pages/projects.html?project=obsidian"
                 class="bg-primary text-on-primary px-10 py-5 font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-secondary transition-all shadow-lg font-label"
               >
                 View Project
@@ -296,31 +414,31 @@
             </div>
 
             <a
-              href="/pages/projects.html"
-              class="col-span-12 md:col-span-8 relative overflow-hidden h-[75vh] bg-surface-container-high"
+              href="/pages/projects.html?project=obsidian"
+              class="col-span-12 md:col-span-8 relative overflow-hidden h-[44vh] sm:h-[52vh] md:h-[75vh] bg-surface-container-high"
             >
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000"
                 alt="Modern luxury residence with glass walls"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </a>
           </div>
 
           <div class="group grid grid-cols-12 gap-0 items-end">
             <a
-              href="/pages/projects.html"
-              class="col-span-12 md:col-span-8 order-2 md:order-1 relative overflow-hidden h-[75vh] bg-surface-container-high"
+              href="/pages/projects.html?project=vertex"
+              class="col-span-12 md:col-span-8 order-2 md:order-1 relative overflow-hidden h-[44vh] sm:h-[52vh] md:h-[75vh] bg-surface-container-high"
             >
               <img
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
                 alt="High-rise skyscraper glass facade"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </a>
 
             <div
-              class="col-span-12 md:col-span-3 order-3 md:order-2 pl-12 pb-4"
+              class="col-span-12 md:col-span-3 order-3 md:order-2 md:pl-12 pb-4"
             >
               <span
                 class="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-6 block font-label"
@@ -338,7 +456,7 @@
                 corporate environments and urban landmarks.
               </p>
               <a
-                href="/pages/projects.html"
+                href="/pages/projects.html?project=vertex"
                 class="bg-primary text-on-primary px-10 py-5 font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-secondary transition-all shadow-lg font-label"
               >
                 View Project
@@ -346,10 +464,10 @@
             </div>
 
             <div
-              class="col-span-12 md:col-span-1 order-1 md:order-3 text-left pl-12"
+              class="col-span-12 md:col-span-1 order-1 md:order-3 text-left md:pl-12"
             >
               <span
-                class="text-7xl font-bold text-primary transition-colors leading-none block mb-2 font-headline"
+                class="text-5xl sm:text-6xl md:text-7xl font-bold text-primary transition-colors leading-none block mb-2 font-headline"
                 >02</span
               >
             </div>
@@ -360,12 +478,12 @@
               class="col-span-12 md:col-span-1 text-left md:text-right md:pr-12 pt-4"
             >
               <span
-                class="text-7xl font-bold text-primary transition-colors leading-none block mb-2 font-headline"
+                class="text-5xl sm:text-6xl md:text-7xl font-bold text-primary transition-colors leading-none block mb-2 font-headline"
                 >03</span
               >
             </div>
 
-            <div class="col-span-12 md:col-span-3 pt-4 pr-12">
+            <div class="col-span-12 md:col-span-3 pt-4 md:pr-12">
               <span
                 class="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-6 block font-label"
                 >Cultural // Landmark</span
@@ -383,7 +501,7 @@
               </p>
 
               <a
-                href="/pages/projects.html"
+                href="/pages/projects.html?project=nova"
                 class="bg-primary text-on-primary px-10 py-5 font-bold uppercase tracking-[0.3em] text-[10px] hover:bg-secondary transition-all shadow-lg font-label"
               >
                 View Project
@@ -391,13 +509,13 @@
             </div>
 
             <a
-              href="/pages/projects.html"
-              class="col-span-12 md:col-span-8 relative overflow-hidden h-[75vh] bg-surface-container-high"
+              href="/pages/projects.html?project=nova"
+              class="col-span-12 md:col-span-8 relative overflow-hidden h-[44vh] sm:h-[52vh] md:h-[75vh] bg-surface-container-high"
             >
               <img
                 src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&q=80&w=2000"
                 alt="Modern museum with concrete curves"
-                class="w-full h-full object-cover"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               />
             </a>
           </div>
@@ -405,7 +523,9 @@
       </section>
 
       <!-- CTA Section -->
-      <section class="bg-[#0a1a1e] py-24 px-12 relative overflow-hidden">
+      <section
+        class="bg-[#0a1a1e] py-24 px-4 sm:px-6 md:px-12 relative overflow-hidden"
+      >
         <div
           class="absolute right-0 bottom-0 w-1/2 h-full opacity-[0.02] pointer-events-none select-none"
         >
@@ -429,14 +549,14 @@
           <div class="lg:col-span-7">
             <div class="flex items-center gap-4 mb-8">
               <span
-                class="text-[#14b8a6] font-black text-[10px] uppercase tracking-[0.6em]"
+                class="text-[#14b8a6] font-black text-[9px] sm:text-[10px] uppercase tracking-[0.3em] sm:tracking-[0.6em]"
                 >Inquiry // 2026</span
               >
               <div class="h-px w-24 bg-white/10"></div>
             </div>
 
             <h2
-              class="text-6xl md:text-8xl font-black text-white tracking-tighter leading-[0.85] uppercase"
+              class="text-4xl sm:text-5xl md:text-8xl font-black text-white tracking-tighter leading-[0.85] uppercase"
             >
               Ready to<br />
               <span class="text-[#14b8a6]">Architect</span> the<br />
@@ -456,7 +576,7 @@
             <div class="flex flex-wrap gap-6">
               <a
                 href="/pages/contact.html"
-                class="group relative bg-[#14b8a6] text-[#0a1a1e] px-12 py-6 font-black uppercase tracking-[0.2em] text-xs transition-all duration-500 hover:pr-16"
+                class="group relative bg-[#14b8a6] text-[#0a1a1e] w-full sm:w-auto text-center px-8 sm:px-12 py-6 font-black uppercase tracking-[0.2em] text-xs transition-all duration-500 hover:pr-16"
               >
                 Start Project
                 <span
@@ -465,11 +585,12 @@
                 >
               </a>
 
-              <button
-                class="border border-white/20 text-white px-12 py-6 font-black uppercase tracking-[0.2em] text-xs hover:bg-white/5 hover:border-white/40 transition-all"
+              <a
+                href="/pages/services.html"
+                class="border border-white/20 text-white w-full sm:w-auto text-center px-8 sm:px-12 py-6 font-black uppercase tracking-[0.2em] text-xs hover:bg-white/5 hover:border-white/40 transition-all"
               >
-                Download Catalog
-              </button>
+                Services & Expertise
+              </a>
             </div>
           </div>
         </div>
@@ -536,6 +657,13 @@
           <nav class="flex flex-col gap-4">
             <a
               class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
+              href="https://www.facebook.com/search/top?q=prodisenyo%20builders"
+              target="_blank"
+              rel="noreferrer"
+              >Facebook</a
+            >
+            <a
+              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
               href="#"
               >LinkedIn</a
             >
@@ -543,11 +671,6 @@
               class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
               href="#"
               >Instagram</a
-            >
-            <a
-              class="text-sm font-bold text-white/60 hover:text-white transition-colors duration-300 uppercase tracking-tight"
-              href="#"
-              >ArchDaily</a
             >
           </nav>
         </div>
@@ -593,22 +716,60 @@
             </span>
           </div>
 
-          <div class="flex gap-10 opacity-20 group">
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >architecture</span
+          <div class="flex gap-8 opacity-20 group">
+            <a
+              href="https://www.facebook.com/search/top?q=prodisenyo%20builders"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook"
+              class="hover:text-[#14b8a6] transition-colors cursor-pointer"
             >
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >engineering</span
-            >
-            <span
-              class="material-symbols-outlined text-2xl hover:text-[#14b8a6] transition-colors cursor-help"
-              >apartment</span
-            >
+              <i class="fa-brands fa-facebook-f text-2xl"></i>
+            </a>
+            <i
+              class="fa-brands fa-linkedin-in text-2xl hover:text-[#14b8a6] transition-colors cursor-pointer"
+            ></i>
+            <i
+              class="fa-brands fa-instagram text-2xl hover:text-[#14b8a6] transition-colors cursor-pointer"
+            ></i>
           </div>
         </div>
       </div>
     </footer>
+    <script>
+      (function () {
+        const nav = document.getElementById("site-nav");
+        if (!nav) return;
+        const menuToggle = document.getElementById("mobile-menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        if (menuToggle && mobileMenu) {
+          menuToggle.addEventListener("click", () => {
+            const expanded =
+              menuToggle.getAttribute("aria-expanded") === "true";
+            menuToggle.setAttribute("aria-expanded", String(!expanded));
+            mobileMenu.classList.toggle("hidden", expanded);
+          });
+
+          window.addEventListener("resize", () => {
+            if (window.innerWidth >= 768) {
+              mobileMenu.classList.add("hidden");
+              menuToggle.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
+
+        const switchAt = Number(nav.getAttribute("data-scroll-switch") || 80);
+
+        const syncNavContrast = () => {
+          const lightMode = window.scrollY > switchAt;
+          nav.classList.toggle("nav-on-light", lightMode);
+          nav.classList.toggle("nav-on-dark", !lightMode);
+        };
+
+        syncNavContrast();
+        window.addEventListener("scroll", syncNavContrast, { passive: true });
+      })();
+    </script>
   </body>
 </html>
