@@ -180,7 +180,7 @@
       class="fixed top-0 w-full z-50 backdrop-blur-md border-b nav-on-dark"
     >
       <div
-        class="flex justify-between items-center w-full py-3 px-4 sm:px-6 max-w-[1500px] mx-auto"
+        class="flex justify-between items-center w-full py-3 px-4 sm:px-20 max-w-[1500px] mx-auto"
       >
         <div
           class="nav-brand text-base sm:text-xl font-bold tracking-tighter text-white"
@@ -272,7 +272,7 @@
     <main>
       <!-- Header Section -->
       <section
-        class="bg-[#0a1a1e] pt-24 md:pt-28 px-4 sm:px-6 md:px-12 overflow-hidden relative"
+        class="bg-[#0a1a1e] pt-24 md:pt-28 md:px-20 px-4 sm:px-6 md:px-20 overflow-hidden relative"
       >
         <div class="max-w-[1500px] mx-auto">
           <div
@@ -292,11 +292,7 @@
                 class="text-4xl sm:text-6xl md:text-[10rem] font-black tracking-[ -0.05em] leading-[0.85] text-white mb-12 uppercase"
               >
                 Structural <br />
-                <span
-                  class="text-transparent"
-                  style="-webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.15)"
-                  >Symphony</span
-                >
+                <span class="text-secondary-fixed">Symphony</span>
               </h1>
 
               <div
@@ -340,9 +336,12 @@
 
       <!-- Featured Projects: Bento Grid Layout -->
       <section
-        class="bg-surface py-32 px-6 md:px-20 relative overflow-hidden font-body"
+        id="featured-structures"
+        class="bg-surface p-4 md:py-32 md:px-20 relative overflow-hidden font-body"
       >
-        <div class="max-w-[1500px] mx-auto z-10 relative space-y-36">
+        <div
+          class="max-w-[1500px] mx-auto z-10 relative space-y-8 md:space-y-36"
+        >
           <div
             class="grid grid-cols-12 gap-8 bg-[#0a1a1e] p-6 sm:p-8 md:p-20 border border-white/5"
           >
@@ -415,7 +414,7 @@
 
             <a
               href="/pages/projects.html?project=obsidian"
-              class="col-span-12 md:col-span-8 relative overflow-hidden h-[44vh] sm:h-[52vh] md:h-[75vh] bg-surface-container-high"
+              class="col-span-12 md:col-span-8 mt-12 relative overflow-hidden h-[52vh] md:h-[75vh] bg-surface-container-high"
             >
               <img
                 src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=2000"
@@ -428,7 +427,7 @@
           <div class="group grid grid-cols-12 gap-0 items-end">
             <a
               href="/pages/projects.html?project=vertex"
-              class="col-span-12 md:col-span-8 order-2 md:order-1 relative overflow-hidden h-[44vh] sm:h-[52vh] md:h-[75vh] bg-surface-container-high"
+              class="col-span-12 md:col-span-8 order-2 md:order-1 relative overflow-hidden h-[52vh] md:h-[75vh] bg-surface-container-high"
             >
               <img
                 src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=2000"
@@ -441,7 +440,7 @@
               class="col-span-12 md:col-span-3 order-3 md:order-2 md:pl-12 pb-4"
             >
               <span
-                class="text-primary font-bold text-[10px] uppercase tracking-[0.4em] mb-6 block font-label"
+                class="text-primary font-bold text-[10px] uppercase tracking-[0.4em] my-6 block font-label"
                 >Commercial // High-Rise</span
               >
               <h3
@@ -467,7 +466,7 @@
               class="col-span-12 md:col-span-1 order-1 md:order-3 text-left md:pl-12"
             >
               <span
-                class="text-5xl sm:text-6xl md:text-7xl font-bold text-primary transition-colors leading-none block mb-2 font-headline"
+                class="text-5xl sm:text-6xl md:text-7xl font-bold text-primary transition-colors leading-none block font-headline"
                 >02</span
               >
             </div>
@@ -510,7 +509,7 @@
 
             <a
               href="/pages/projects.html?project=nova"
-              class="col-span-12 md:col-span-8 relative overflow-hidden h-[44vh] sm:h-[52vh] md:h-[75vh] bg-surface-container-high"
+              class="col-span-12 mt-12 md:col-span-8 relative overflow-hidden h-[52vh] md:h-[75vh] bg-surface-container-high"
             >
               <img
                 src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?auto=format&fit=crop&q=80&w=2000"
@@ -524,7 +523,7 @@
 
       <!-- CTA Section -->
       <section
-        class="bg-[#0a1a1e] py-24 px-4 sm:px-6 md:px-12 relative overflow-hidden"
+        class="bg-[#0a1a1e] md:py-24 py-12 px-6 sm:px-6 md:px-20 relative overflow-hidden"
       >
         <div
           class="absolute right-0 bottom-0 w-1/2 h-full opacity-[0.02] pointer-events-none select-none"
@@ -600,7 +599,7 @@
     <!-- Footer -->
     <footer class="bg-[#0a1a1e] text-white w-full border-t border-white/5">
       <div
-        class="w-full py-24 max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-24"
+        class="w-full p-6 md:py-24 md:px-20 max-w-[1500px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-24"
       >
         <div class="space-y-8">
           <div
@@ -698,7 +697,7 @@
         </div>
       </div>
 
-      <div class="w-full py-12 border-t border-white/5 bg-black/20">
+      <div class="w-full py-6 md:px-20 border-t border-white/5 bg-black/20">
         <div
           class="max-w-[1500px] mx-auto flex flex-col md:flex-row justify-between items-center gap-8"
         >
