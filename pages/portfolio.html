@@ -170,6 +170,12 @@
         background-color: #205e61 !important;
         color: #ffffff !important;
       }
+      #site-nav.nav-on-dark #mobile-menu-toggle .material-symbols-outlined {
+        color: #fff !important;
+      }
+      #site-nav.nav-on-light #mobile-menu-toggle .material-symbols-outlined {
+        color: #111 !important;
+      }
     </style>
   </head>
   <body class="text-on-surface overflow-x-hidden">
@@ -177,7 +183,7 @@
     <nav
       id="site-nav"
       data-scroll-switch="90"
-      class="fixed top-0 w-full z-50 backdrop-blur-md border-b nav-on-dark"
+      class="fixed top-0 w-full z-50 backdrop-blur-2xl border-b nav-on-dark"
     >
       <div class="flex justify-between items-center w-full py-3 px-4 sm:px-20">
         <div
@@ -230,7 +236,7 @@
       </div>
       <div
         id="mobile-menu"
-        class="hidden md:hidden border-t border-white/10 px-4 py-4 bg-black/30 backdrop-blur-md"
+        class="hidden md:hidden border-t border-gray-400/30 px-4 py-4"
       >
         <div class="flex flex-col gap-3">
           <a
